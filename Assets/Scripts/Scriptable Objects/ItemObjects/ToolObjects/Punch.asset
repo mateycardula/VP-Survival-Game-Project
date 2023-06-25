@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030a9fde76ccea3bf8633c5528631aa1, type: 3}
+  m_Name: Punch
+  m_EditorClassIdentifier: 
+  itemName: Punch
+  description: 
+  model: {fileID: 6973856054268898478, guid: 943b287568fbf24d5a33362239854525, type: 3}
+  inventorySprite: {fileID: 0}
+  attackSpeed: 0.5
+  damage: 5
