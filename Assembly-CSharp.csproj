@@ -68,6 +68,7 @@
      <Compile Include="Assets/Scripts/Inventory Management/Tool Slot.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserManager.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserWindow.cs" />
+     <Compile Include="Assets/InventoryInputManager.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/Resizer.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/Inventory.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabApi.cs" />
@@ -76,7 +77,6 @@
      <Folder Include="Assets/Scripts/Scriptable Objects" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/Sketchfab For Unity/Dependencies" />
-     <Folder Include="Assets/Models/Tools/LowPolyRPGWeapons_Lite/Textures" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
      <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects" />
@@ -99,7 +99,6 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/Sketchfab Axe" />
      <Folder Include="Assets/TextMesh Pro" />
-     <Folder Include="Assets/Models/Tools/LowPolyRPGWeapons_Lite/Models" />
      <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects/ToolObjects" />
      <Folder Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
@@ -115,7 +114,6 @@
      <Folder Include="Assets/TextMesh Pro/Shaders" />
      <Folder Include="Assets/TextMesh Pro/Resources/Style Sheets" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
-     <Folder Include="Assets/Models/Tools/LowPolyRPGWeapons_Lite/Materials" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Scripts/Inventory Management" />
      <Folder Include="Assets/Scenes" />
@@ -126,7 +124,6 @@
      <Folder Include="Assets/Models" />
      <Folder Include="Assets/Sketchfab For Unity/Dependencies/Libraries" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
-     <Folder Include="Assets/Models/Tools/LowPolyRPGWeapons_Lite" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <None Include="Assets/Models/Tools/Axes_and_Hammers/Readme.txt" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFBumpToNormal.shader" />

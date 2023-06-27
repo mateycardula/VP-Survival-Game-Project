@@ -6,12 +6,14 @@ using UnityEngine;
 [System.Serializable]
 public class ToolSlot
 {
+    [SerializeField] private Tool toolHolder; 
     public bool isEquipped;
     public string toolName;
-    public ToolScriptableObject tool;
+    public ItemScriptableObject tool;
 
-    public ToolSlot(string _name, ToolScriptableObject _tool, bool _isEquipped = false)
+    public ToolSlot(string _name, ItemScriptableObject _tool, bool _isEquipped = false)
     {
+        
         isEquipped = _isEquipped;
         toolName = _name;
         tool = _tool;

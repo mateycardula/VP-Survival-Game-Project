@@ -1,46 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToolInventory : Inventory
 {
 
-    public ToolSlot[] slots;
+    
     private ToolSlot prevEquipped;
+    [SerializeField] private GameObject primaryToolUI, secondaryToolUI;
+    
     [SerializeField] private Tool toolHolder;
+    [SerializeField] private InventoryInputManager invManager;
 
     // Start is called before the first frame update
+    
     void Start()
     {
+       
         itemCount = 0;
         inventoryCapacity = 2;
         slots = new ToolSlot[2];
         slots[0] = new ToolSlot();
         slots[1] = new ToolSlot();
-        slots[0].isEquipped = true;
-        SetEquipped(0);
-        prevEquipped = slots[0];
+        UpdateInterface();
     }
     
 
 // Update is called once per frame
     void Update()
     {
-        if(GetEquippedToolID() != -1)
-        {
-            if (!prevEquipped.Equals(slots[GetEquippedToolID()]))
-            {
-                toolHolder.UpdateToolModel(slots[GetEquippedToolID()].tool);
-            }
-        
-            prevEquipped = slots[GetEquippedToolID()];
-        }
-        else
-        {
-            prevEquipped = new ToolSlot();
-        }
+        // if(GetEquippedToolID() != -1)
+        // {
+        //     if (!prevEquipped.Equals(slots[GetEquippedToolID()]))
+        //     {
+        //         toolHolder.UpdateToolModel(slots[GetEquippedToolID()].tool);
+        //     }
+        //
+        //     prevEquipped = slots[GetEquippedToolID()];
+        // }
+        // else
+        // {
+        //     prevEquipped = new ToolSlot();
+        // }
         
     }
 
@@ -51,46 +56,53 @@ public class ToolInventory : Inventory
         //Ako e poln tool inventory proveri dali e nekoj od tool-ovite equipnat
         if (itemCount == inventoryCapacity)
         {
-          
             if (equippedToolID != -1)
             {
                 DropItem(equippedToolID);
                 slots[equippedToolID] = new ToolSlot(iso.name, iso as ToolScriptableObject, true);
+                
+                toolHolder.UpdateToolModel(iso);
                 itemCount++;
+                UpdateInterface();
                 return iso; 
             }
             DropItem(0);
             slots[0] = new ToolSlot(iso.name, iso as ToolScriptableObject);
             itemCount++;
+            UpdateInterface();
+            return iso;
+        }
+
+
+        if (itemCount == 0)
+        {
+            itemCount++;
+            slots[0] = new ToolSlot(iso.name, iso as ToolScriptableObject);
+            SetEquipped(1);
+           UpdateInterface();
             return iso;
         }
         
-        
         int slotID = 0;
-        
-        
         foreach (ToolSlot toolSlot in slots)
         {
             if (toolSlot.tool == null)
             {
-                // if(equippedToolID == -1)
-                // {
-                //     slots[slotID] = new ToolSlot(iso.name, iso as ToolScriptableObject);
-                //     return iso;
-                // }
                 slots[slotID] = new ToolSlot(iso.name, iso as ToolScriptableObject);
                 itemCount++;
+                UpdateInterface();
                 return iso;
             }
             slotID++;
         }
+        UpdateInterface();
         return iso;
     }
 
     protected override ItemScriptableObject DropItem(int itemSlotID)
     {
         //TODO: Kreiraj instanca od modelot pred covekot i aktiviraj useGravity od rigidBody
-        ToolScriptableObject dropped = slots[itemSlotID].tool; 
+        ToolScriptableObject dropped = slots[itemSlotID].tool as ToolScriptableObject; 
         slots[itemSlotID] = new ToolSlot();
         itemCount--;
         return dropped;
@@ -100,7 +112,7 @@ public class ToolInventory : Inventory
     {
         foreach ( ToolSlot toolSlot in slots)
         {
-            if (toolSlot.isEquipped == true) return toolSlot.tool;
+            if (toolSlot.isEquipped == true) return toolSlot.tool as ToolScriptableObject;
         }
         return null;
     }
@@ -117,8 +129,24 @@ public class ToolInventory : Inventory
         return -1; 
     }
 
-    private void SetEquipped(int slotID)
+    public void SetEquipped(int ID)
     {
-        slots[slotID].isEquipped = false;
+        int id = ID - 1;
+        for (int i = 0; i < inventoryCapacity; i++)
+        {
+            if (id == i) slots[i].isEquipped = true;
+            else slots[i].isEquipped = false;
+        }
+        toolHolder.UpdateToolModel(slots[id].tool);
+    }
+
+    void UpdateInterface()
+    {
+        primaryToolUI.GetComponent<Text>().text = "Empty 1";
+        secondaryToolUI.GetComponent<Text>().text= "Empty 2";
+        if(slots[0].tool != null)
+        primaryToolUI.GetComponent<Text>().text = slots[0].tool.name;
+        if(slots[1].tool != null)
+        secondaryToolUI.GetComponent<Text>().text = slots[1].tool.name;
     }
 }

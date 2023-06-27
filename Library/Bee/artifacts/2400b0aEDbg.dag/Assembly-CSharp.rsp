@@ -354,6 +354,7 @@
 -analyzer:"/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/HITController.cs"
+"Assets/InventoryInputManager.cs"
 "Assets/PlayerAnimationController.cs"
 "Assets/ResizeScript.cs"
 "Assets/ScaleScript.cs"

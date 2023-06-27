@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Tool : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Tool : MonoBehaviour
     public GameObject modelTool;
     //public ToolScriptableObject tool;
 
-    [SerializeField] private ToolScriptableObject empty; 
+    [FormerlySerializedAs("empty")] [SerializeField] private ToolScriptableObject punch; 
     // Start is called before the first frame update
   
 
@@ -26,7 +27,7 @@ public class Tool : MonoBehaviour
         
         if (tool == null)
         {
-            modelTool = Instantiate(empty.model);
+            modelTool = Instantiate(punch.model);
             modelTool.transform.SetParent(transform);
             modelTool.transform.position = transform.position;
             return;
@@ -37,8 +38,11 @@ public class Tool : MonoBehaviour
         modelTool.transform.position = transform.position;
         modelTool.transform.rotation = transform.rotation;
     }
-    
-    
+
+    // SetEquipped()
+    // {
+    //     
+    // }
     
 
     // Update is called once per frame
