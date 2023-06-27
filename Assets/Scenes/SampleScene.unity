@@ -426,6 +426,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 442211545890891252, guid: e64b0868b054c201bb5f803a9329a937, type: 3}
+      propertyPath: m_Size.x
+      value: 0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 934819498106040419, guid: e64b0868b054c201bb5f803a9329a937, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -477,7 +481,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1560536704585768433, guid: e64b0868b054c201bb5f803a9329a937, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 601521677}
   m_SourcePrefab: {fileID: 100100000, guid: e64b0868b054c201bb5f803a9329a937, type: 3}
 --- !u!1 &425116990
 GameObject:
@@ -799,9 +806,13 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1005522857334745382, guid: 8732339f0019858a9b3644cf93e7652b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2280406672861932540, guid: 8732339f0019858a9b3644cf93e7652b, type: 3}
       propertyPath: m_Name
-      value: Hand
+      value: LeftHand
       objectReference: {fileID: 0}
     - target: {fileID: 2280406672861932540, guid: 8732339f0019858a9b3644cf93e7652b, type: 3}
       propertyPath: m_IsActive
@@ -864,6 +875,38 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8732339f0019858a9b3644cf93e7652b, type: 3}
+--- !u!1 &601521672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1560536704585768433, guid: e64b0868b054c201bb5f803a9329a937, type: 3}
+  m_PrefabInstance: {fileID: 271968250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &601521677
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601521672}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1035,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 963194228}
     m_Modifications:
+    - target: {fileID: 1005522857334745382, guid: 8732339f0019858a9b3644cf93e7652b, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2001950462850426288, guid: 8732339f0019858a9b3644cf93e7652b, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1202,6 +1249,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864779311}
   m_CullTransparentMesh: 1
+--- !u!1 &935108448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2280406672861932540, guid: 8732339f0019858a9b3644cf93e7652b, type: 3}
+  m_PrefabInstance: {fileID: 546748450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,7 +1313,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 38.6
+  field of view: 25.8
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1287,7 +1339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: -0.243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1450,7 +1502,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129629037}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -2443,6 +2495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelTool: {fileID: 0}
+  rightHand: {fileID: 935108448}
   punch: {fileID: 11400000, guid: 6e44994223bc9d7ad8ba8d3d35713030, type: 2}
 --- !u!1 &2069431803
 GameObject:

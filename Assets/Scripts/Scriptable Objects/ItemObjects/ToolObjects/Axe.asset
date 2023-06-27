@@ -18,3 +18,4 @@ MonoBehaviour:
   inventorySprite: {fileID: 0}
   attackSpeed: 1
   damage: 20
+  isTwoHanded: 1
