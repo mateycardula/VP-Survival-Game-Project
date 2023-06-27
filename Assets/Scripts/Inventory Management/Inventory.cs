@@ -5,7 +5,8 @@ using UnityEngine;
 
 public abstract class  Inventory : MonoBehaviour
 {
-    [SerializeField] public ToolSlot[] slots; 
+    [SerializeField] public ToolSlot[] slots;
+    
     // [SerializeField] private Tool toolHolder;
     // [SerializeField] private ToolInventory toolInv;
 

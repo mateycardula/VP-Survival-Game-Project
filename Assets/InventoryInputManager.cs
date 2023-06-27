@@ -17,36 +17,38 @@ public class InventoryInputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SetEquipped(true, false);
-            toolInventory.SetEquipped(1);
+            SetEquipped(0);
         }
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SetEquipped(false, true);
-            toolInventory.SetEquipped(2);
+            SetEquipped(1);
         }
     }
 
     //TODO: Add bool third when ItemInventory is implemented
-    public void SetEquipped(bool first, bool second)
+    public void SetEquipped(int id)
     {
-        toolInventory.slots[0].isEquipped = first;
-        toolInventory.slots[1].isEquipped = second;
-        if (first)
+        toolInventory.slots[0].isEquipped = false;
+        toolInventory.slots[1].isEquipped = false;
+        
+        if(id != -1)
+        toolInventory.slots[id].isEquipped = true;
+        
+        if (id == 0)
         {
             toolHolder.UpdateToolModel(toolInventory.slots[0].tool);
         }
         
-        if (second)
+        if (id == 1)
         {
             toolHolder.UpdateToolModel(toolInventory.slots[1].tool);
         }
 
-        if (!(first || second))
+        if (id == -1)
         {
             toolHolder.UpdateToolModel();
-        }
+        }   
     }
 }

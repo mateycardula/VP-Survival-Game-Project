@@ -51,50 +51,49 @@ public class ToolInventory : Inventory
 
     public override ItemScriptableObject CollectItem(ItemScriptableObject iso)
     {
-        int equippedToolID = GetEquippedToolID();
         
+        bool collected = false;
+        int equippedToolID = GetEquippedToolID();
+
         //Ako e poln tool inventory proveri dali e nekoj od tool-ovite equipnat
         if (itemCount == inventoryCapacity)
         {
             if (equippedToolID != -1)
             {
-                DropItem(equippedToolID);
-                slots[equippedToolID] = new ToolSlot(iso.name, iso as ToolScriptableObject, true);
-                
-                toolHolder.UpdateToolModel(iso);
-                itemCount++;
-                UpdateInterface();
-                return iso; 
+                DropAndAddTool(iso, equippedToolID);
             }
-            DropItem(0);
-            slots[0] = new ToolSlot(iso.name, iso as ToolScriptableObject);
-            itemCount++;
-            UpdateInterface();
-            return iso;
+            else DropAndAddTool(iso, 0);
+            collected = true;
         }
 
 
-        if (itemCount == 0)
+        
+        if (!collected)
         {
-            itemCount++;
-            slots[0] = new ToolSlot(iso.name, iso as ToolScriptableObject);
-            SetEquipped(1);
-           UpdateInterface();
-            return iso;
+            int slotID = 0;
+            foreach (ToolSlot toolSlot in slots)
+            {
+                if (toolSlot.tool == null)
+                {
+                    if (itemCount == 0) equippedToolID = 0;
+                    collected = true;
+                    
+                    if (equippedToolID != -1)
+                    {
+                        AddTool(iso, slotID);
+                    }
+                    else
+                    {
+                        AddTool(iso, slotID);
+                    }
+                    break;
+                    
+                }
+                slotID++;
+            }
         }
         
-        int slotID = 0;
-        foreach (ToolSlot toolSlot in slots)
-        {
-            if (toolSlot.tool == null)
-            {
-                slots[slotID] = new ToolSlot(iso.name, iso as ToolScriptableObject);
-                itemCount++;
-                UpdateInterface();
-                return iso;
-            }
-            slotID++;
-        }
+        invManager.SetEquipped(equippedToolID);
         UpdateInterface();
         return iso;
     }
@@ -140,6 +139,19 @@ public class ToolInventory : Inventory
         toolHolder.UpdateToolModel(slots[id].tool);
     }
 
+    void AddTool(ItemScriptableObject iso, int id)
+    {
+        slots[id] = new ToolSlot(iso.name, iso as ToolScriptableObject);
+        itemCount++; 
+    }
+
+    void DropAndAddTool(ItemScriptableObject iso, int id)
+    {
+        DropItem(id);
+        slots[id] = new ToolSlot(iso.name, iso as ToolScriptableObject);
+        itemCount++;      
+    }
+    
     void UpdateInterface()
     {
         primaryToolUI.GetComponent<Text>().text = "Empty 1";
