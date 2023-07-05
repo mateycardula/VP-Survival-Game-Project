@@ -46,12 +46,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabExporter.cs" />
+     <Compile Include="Assets/Scripts/Inventory Management/ItemInventory.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ItemScriptableObject.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabPlugin.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabImporterWindow.cs" />
+     <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ResourceScriptableObject.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ISOHolder.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabModelWindow.cs" />
+     <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ToolScriptableObject.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabUI.cs" />
+     <Compile Include="Assets/NewScript.cs" />
      <Compile Include="Assets/TestScript.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/EnemyObjects/EnemyScriptableObject.cs" />
      <Compile Include="Assets/ScaleScript.cs" />
@@ -61,12 +65,13 @@
      <Compile Include="Assets/PlayerAnimationController.cs" />
      <Compile Include="Assets/HITController.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabLogger.cs" />
-     <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ToolObjects/ToolScriptableObject.cs" />
      <Compile Include="Assets/Scripts/CursorState.cs" />
      <Compile Include="Assets/Scripts/Tool.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/ToolInventory.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/Tool Slot.cs" />
+     <Compile Include="Assets/Scripts/Inventory Management/Item Slot.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserManager.cs" />
+     <Compile Include="Assets/InventoryItemsHolder.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserWindow.cs" />
      <Compile Include="Assets/InventoryInputManager.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/Resizer.cs" />
@@ -79,26 +84,33 @@
      <Folder Include="Assets/Sketchfab For Unity/Dependencies" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
+     <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects/InventoryItems" />
      <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFFlipTexture.shader" />
      <Folder Include="Assets/Scripts/PlayerControllers" />
      <Folder Include="Assets/Sketchfab For Unity/Dependencies/Shaders" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFColorSpace.cginc" />
-     <Folder Include="Assets/Models/Tools/Axes_and_Hammers/Axes" />
+     <Folder Include="Assets/Graphics/Sprites/Inventory/Item Sprites" />
+     <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Axes" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+     <Folder Include="Assets/Graphics/Models/Resources" />
+     <Folder Include="Assets/Graphics/Sprites/Inventory/Materials" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFPackOccMetalRough.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources/Fonts &amp; Materials" />
-     <Folder Include="Assets/Models/Tools/Axes_and_Hammers/Uvs" />
+     <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Uvs" />
+     <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects/InventoryItems/Resources" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <Folder Include="Assets/Scripts" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources" />
-     <Folder Include="Assets/Models/Tools/Torch" />
+     <Folder Include="Assets/Graphics/Models/Tools/Torch" />
      <Folder Include="Assets/Sketchfab For Unity/Dependencies/Resources" />
+     <Folder Include="Assets/Graphics/Sprites/Inventory" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/Sketchfab Axe" />
      <Folder Include="Assets/TextMesh Pro" />
+     <Folder Include="Assets/Graphics/Models/Resources/Wood" />
      <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects/ToolObjects" />
      <Folder Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
@@ -117,20 +129,23 @@
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Scripts/Inventory Management" />
      <Folder Include="Assets/Scenes" />
-     <Folder Include="Assets/Models/Tools" />
+     <Folder Include="Assets/Graphics/Models/Tools" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
-     <Folder Include="Assets/Models/Tools/Axes_and_Hammers/Axes/Materials" />
-     <Folder Include="Assets/Models/Tools/Axes_and_Hammers/Prefabs" />
-     <Folder Include="Assets/Models" />
+     <Folder Include="Assets/Graphics" />
+     <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Axes/Materials" />
+     <Folder Include="Assets/Animations/TorchHalo" />
+     <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Prefabs" />
+     <Folder Include="Assets/Graphics/Models" />
      <Folder Include="Assets/Sketchfab For Unity/Dependencies/Libraries" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets/Models/Tools/Axes_and_Hammers/Readme.txt" />
+     <None Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Readme.txt" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFBumpToNormal.shader" />
-     <Folder Include="Assets/Models/Tools/Axes_and_Hammers" />
+     <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers" />
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets/Graphics/Sprites" />
      <Folder Include="Assets/Animations" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
@@ -762,23 +777,56 @@
      <Reference Include="mscorlib">
      <HintPath>/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Sysroot.Linux_x86_64">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Toolchain.Linux-x86_64">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Shared.Editor">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
@@ -795,50 +843,20 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>/home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030a9fde76ccea3bf8633c5528631aa1, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
+  stack: 0
   itemName: Axe
   description: dasdasd
   model: {fileID: 3831051722696321606, guid: b2c6a919d2d49b3c09b240fb90b54d99, type: 3}
-  inventorySprite: {fileID: 0}
+  inventorySprite: {fileID: 21300000, guid: 84facfe1b315661e5a87997a3c92706f, type: 3}
   attackSpeed: 1
   damage: 20
   isTwoHanded: 1

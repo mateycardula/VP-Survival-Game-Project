@@ -8,22 +8,21 @@ public class ToolSlot
 {
     [SerializeField] private Tool toolHolder; 
     public bool isEquipped;
-    public string toolName;
     public ItemScriptableObject tool;
-
-    public ToolSlot(string _name, ItemScriptableObject _tool, bool _isEquipped = false)
+    public int count;
+    public ToolSlot(ItemScriptableObject _tool, int _count = 1, bool _isEquipped = false)
     {
         
         isEquipped = _isEquipped;
-        toolName = _name;
         tool = _tool;
+        count = _count;
     }
 
     public ToolSlot()
     {
         isEquipped = false;
-        toolName = "Empty";
         tool = null;
+        count = 0;
     }
 
 }

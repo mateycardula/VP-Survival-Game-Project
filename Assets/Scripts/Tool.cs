@@ -20,9 +20,10 @@ public class Tool : MonoBehaviour
     void Start()
     {
         UpdateToolModel();
+        modelTool.transform.position = transform.position;
     }
 
-    public void UpdateToolModel(ItemScriptableObject tool = null)
+    public void UpdateToolModel(ItemScriptableObject tool = null, int id = -1)
     {
         if (!modelTool.Equals(null))
             GameObject.Destroy(modelTool);
@@ -34,6 +35,9 @@ public class Tool : MonoBehaviour
             modelTool.transform.SetParent(transform);
             modelTool.transform.position = transform.position;
             if (modelTool.GetComponent<BoxCollider>().enabled) modelTool.GetComponent<BoxCollider>().enabled = false;
+            modelTool.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            modelTool.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            //Component.Destroy();
             rightHand.SetActive(false);
             return;
         }
@@ -44,10 +48,11 @@ public class Tool : MonoBehaviour
         modelTool.transform.position = transform.position;
         modelTool.transform.rotation = transform.rotation;
         if (modelTool.GetComponent<BoxCollider>().enabled) modelTool.GetComponent<BoxCollider>().enabled = false;
+        modelTool.gameObject.GetComponent<Rigidbody>().useGravity = false;
+        modelTool.gameObject.GetComponent<Rigidbody>().isKinematic = true;
     
         if (tool is ToolScriptableObject)
         {
-            Debug.Log(tool.name);
             if ((tool as ToolScriptableObject).isTwoHanded)
             {
                 rightHand.SetActive(true);
@@ -62,6 +67,8 @@ public class Tool : MonoBehaviour
             rightHand.SetActive(false);
         }
     }
+
+ 
 
     // SetEquipped()
     // {

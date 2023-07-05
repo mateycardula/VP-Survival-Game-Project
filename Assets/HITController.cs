@@ -7,15 +7,12 @@ using UnityEngine.Serialization;
 
 public class HITController : MonoBehaviour
 {
-
-
-
-
     [SerializeField] private GameObject inventoryManager;
     [SerializeField] private GameObject cameraObj;
     [SerializeField] private GameObject UICollectIndicator;
 
-    private ToolInventory toolInventoryManager; 
+    private ToolInventory toolInventoryManager;
+    private ItemInventory itemInventoryManager;
     
     //Hover Effect Variables
     [SerializeField] private Behaviour hoveredItemEffect;
@@ -24,6 +21,7 @@ public class HITController : MonoBehaviour
     void Start()
     {
         toolInventoryManager = inventoryManager.GetComponent<ToolInventory>();
+        itemInventoryManager = inventoryManager.GetComponent<ItemInventory>();
         UICollectIndicator.SetActive(false);
     }
 
@@ -52,6 +50,11 @@ public class HITController : MonoBehaviour
                     if (hitItemISO is ToolScriptableObject)
                     {
                         toolInventoryManager.CollectItem(hitItemISO);
+                        GameObject.Destroy(hitItem);
+                    }
+                    else
+                    {
+                        itemInventoryManager.CollectItem(hitItemISO);
                         GameObject.Destroy(hitItem);
                     }
                 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class InventoryInputManager : MonoBehaviour
 {
     [SerializeField] private ToolInventory toolInventory;
-
+    [SerializeField] private GameObject [] equippedToolInterface = new GameObject[2];
     [SerializeField] private Tool toolHolder;
     // Start is called before the first frame update
     void Start()
@@ -19,11 +19,17 @@ public class InventoryInputManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SetEquipped(0);
+            if(toolInventory.GetEquippedToolID() != 0)
+                SetEquipped(0);
+            else
+                SetEquipped(-1);
         }
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SetEquipped(1);
+            if(toolInventory.GetEquippedToolID() != 1)
+                SetEquipped(1);
+            else
+                SetEquipped(-1);
         }
     }
 
@@ -32,23 +38,24 @@ public class InventoryInputManager : MonoBehaviour
     {
         toolInventory.slots[0].isEquipped = false;
         toolInventory.slots[1].isEquipped = false;
+        equippedToolInterface[0].SetActive(false);
+        equippedToolInterface[1].SetActive(false);
         
         if(id != -1)
-        toolInventory.slots[id].isEquipped = true;
-        
-        if (id == 0)
         {
-            toolHolder.UpdateToolModel(toolInventory.slots[0].tool);
+            toolInventory.slots[id].isEquipped = true;
+            if(toolInventory.slots[id].tool !=null)
+            {
+                equippedToolInterface[id].SetActive(true);
+            }
+            else equippedToolInterface[id].SetActive(false);
+            
+            toolHolder.UpdateToolModel(toolInventory.slots[id].tool);
+            
         }
-        
-        if (id == 1)
-        {
-            toolHolder.UpdateToolModel(toolInventory.slots[1].tool);
-        }
-
-        if (id == -1)
+        else
         {
             toolHolder.UpdateToolModel();
-        }   
+        }
     }
 }

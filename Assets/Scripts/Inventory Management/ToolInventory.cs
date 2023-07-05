@@ -8,11 +8,9 @@ using UnityEngine.UI;
 
 public class ToolInventory : Inventory
 {
-
-    
     private ToolSlot prevEquipped;
-    [SerializeField] private GameObject primaryToolUI, secondaryToolUI;
-    
+    [SerializeField] private GameObject[] toolSpritesUI = new GameObject[2];
+
     [SerializeField] private Tool toolHolder;
     [SerializeField] private InventoryInputManager invManager;
 
@@ -20,12 +18,12 @@ public class ToolInventory : Inventory
     
     void Start()
     {
-       
         itemCount = 0;
         inventoryCapacity = 2;
         slots = new ToolSlot[2];
         slots[0] = new ToolSlot();
         slots[1] = new ToolSlot();
+        invManager.SetEquipped(-1);
         UpdateInterface();
     }
     
@@ -116,7 +114,7 @@ public class ToolInventory : Inventory
         return null;
     }
 
-    private int GetEquippedToolID()
+    public int GetEquippedToolID()
     {
         int toolID = 0;
         foreach ( ToolSlot toolSlot in slots)
@@ -141,24 +139,27 @@ public class ToolInventory : Inventory
 
     void AddTool(ItemScriptableObject iso, int id)
     {
-        slots[id] = new ToolSlot(iso.name, iso as ToolScriptableObject);
+        slots[id] = new ToolSlot(iso as ToolScriptableObject);
         itemCount++; 
     }
 
     void DropAndAddTool(ItemScriptableObject iso, int id)
     {
         DropItem(id);
-        slots[id] = new ToolSlot(iso.name, iso as ToolScriptableObject);
+        slots[id] = new ToolSlot(iso as ToolScriptableObject);
         itemCount++;      
     }
     
-    void UpdateInterface()
+    protected override void UpdateInterface(int id = -1)
     {
-        primaryToolUI.GetComponent<Text>().text = "Empty 1";
-        secondaryToolUI.GetComponent<Text>().text= "Empty 2";
-        if(slots[0].tool != null)
-        primaryToolUI.GetComponent<Text>().text = slots[0].tool.name;
-        if(slots[1].tool != null)
-        secondaryToolUI.GetComponent<Text>().text = slots[1].tool.name;
+        for (int i = 0; i < inventoryCapacity; i++)
+        {
+            if(slots[i].tool == null) toolSpritesUI[i].SetActive(false);
+            else
+            {
+                toolSpritesUI[i].GetComponent<Image>().sprite = slots[i].tool.inventorySprite;
+                toolSpritesUI[i].SetActive(true);
+            }
+        }
     }
 }
