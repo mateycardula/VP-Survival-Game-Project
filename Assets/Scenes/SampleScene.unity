@@ -2264,7 +2264,7 @@ MonoBehaviour:
   - {fileID: 4908245028494689782, guid: c0b8792ad9ae3a0858e6c66bc6c9b30d, type: 3}
   - {fileID: 4908245028494689782, guid: 5b255f46c944bfa3e9f2776cfa403b39, type: 3}
   - {fileID: 4908245028494689782, guid: 86891001c5f1bf7479bd3dde5b953726, type: 3}
-  treeCount: 1000
+  treeCount: 500
 --- !u!4 &592495453
 Transform:
   m_ObjectHideFlags: 0
@@ -2694,7 +2694,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolObject: {fileID: 2003493079}
-  leftHand: {fileID: 935108448}
 --- !u!1 &825440785
 GameObject:
   m_ObjectHideFlags: 0

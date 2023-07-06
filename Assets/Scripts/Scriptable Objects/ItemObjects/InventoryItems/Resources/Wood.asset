@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbaa466aa1f6f157fb6489ee57596d18, type: 3}
+  m_Script: {fileID: 11500000, guid: bde092f2d206b79229ad1026000c4e48, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
-  stack: 4
+  stack: 3
   itemName: Wood
-  description: Drveno drvo
+  description: 
   model: {fileID: 5188403426815820064, guid: c9b8f5b261036f86fafada8cf40d009e, type: 3}
-  inventorySprite: {fileID: 21300000, guid: f26efcbfb8dc020379e697a0ed27bfda, type: 3}
+  inventorySprite: {fileID: 21300000, guid: 0fdc7de55ef8b0b0ca36e962f0ea10ea, type: 3}
   OnLeftClickAnimationClip: {fileID: 0}
