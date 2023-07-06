@@ -48,13 +48,11 @@
      <Compile Include="Assets/Scripts/Destroyable.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabExporter.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/ItemInventory.cs" />
-     <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ItemScriptableObject.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabPlugin.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabImporterWindow.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ResourceScriptableObject.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ISOHolder.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabModelWindow.cs" />
-     <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ToolScriptableObject.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabUI.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ToolScriptableObject.cs" />
      <Compile Include="Assets/NewScript.cs" />
@@ -80,7 +78,6 @@
      <Compile Include="Assets/InventoryItemsHolder.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserWindow.cs" />
      <Compile Include="Assets/InventoryInputManager.cs" />
-     <Compile Include="Assets/Scripts/Scriptable Objects/ResourceScriptableObject.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ISOAnimationController.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/Resizer.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/Inventory.cs" />
