@@ -24,7 +24,7 @@ AssetImportWorker2
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-35685
+41415
 Successfully changed project path to: /home/mateycardula/Dev/Unity/Projects/Survival-Game
 /home/mateycardula/Dev/Unity/Projects/Survival-Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -58,11 +58,11 @@ Successfully changed project path to: /home/mateycardula/Dev/Unity/Projects/Surv
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [139692727087808] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 1034642356 [EditorId] 1034642356 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.4) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [140559695975104] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 1005757435 [EditorId] 1005757435 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.4) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [139692727087808] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 1034642356 [EditorId] 1034642356 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.4) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [140559695975104] Host "[IP] 192.168.1.4 [Port] 0 [Flags] 2 [Guid] 1005757435 [EditorId] 1005757435 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.4) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 8,76 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 13,43 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Initialize engine version: 2022.3.2f1 (d74737c6db50)
 [Subsystems] Discovering subsystems at path /home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -78,49 +78,49 @@ int_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program
 L_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewpor
 t_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_share
 d_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -703449520
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 51634928
 Initialize mono
 Mono path[0] = '/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Managed'
 Mono path[1] = '/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
 Mono config path = '/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56354
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56242
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0,009286 seconds.
-- Loaded All Assemblies, in  0,617 seconds
+Registered in 0,010669 seconds.
+- Loaded All Assemblies, in  0,582 seconds
 Native extension for LinuxStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0,733 seconds
-Domain Reload Profiling: 1349ms
-	BeginReloadAssembly (141ms)
+- Finished resetting the current domain, in  0,588 seconds
+Domain Reload Profiling: 1170ms
+	BeginReloadAssembly (115ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (64ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (112ms)
-	LoadAllAssembliesAndSetupDomain (283ms)
-		LoadAssemblies (138ms)
+	RebuildCommonClasses (60ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (122ms)
+	LoadAllAssembliesAndSetupDomain (269ms)
+		LoadAssemblies (113ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (276ms)
-			TypeCache.Refresh (275ms)
-				TypeCache.ScanAssembly (251ms)
+		AnalyzeDomain (261ms)
+			TypeCache.Refresh (260ms)
+				TypeCache.ScanAssembly (239ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (734ms)
+	FinalizeReload (589ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (575ms)
+		SetupLoadedEditorAssemblies (444ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (81ms)
-			SetLoadedEditorAssemblies (19ms)
+			InitializePlatformSupportModulesInManaged (63ms)
+			SetLoadedEditorAssemblies (16ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (5ms)
-			ProcessInitializeOnLoadAttributes (301ms)
-			ProcessInitializeOnLoadMethodAttributes (168ms)
+			ProcessInitializeOnLoadAttributes (257ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -130,51 +130,51 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1,406 seconds
-Refreshing native plugins compatible for Editor in 7,71 ms, found 0 plugins.
+- Loaded All Assemblies, in  1,275 seconds
+Refreshing native plugins compatible for Editor in 4,64 ms, found 0 plugins.
 Native extension for LinuxStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1,078 seconds
-Domain Reload Profiling: 2482ms
-	BeginReloadAssembly (237ms)
+- Finished resetting the current domain, in  0,865 seconds
+Domain Reload Profiling: 2137ms
+	BeginReloadAssembly (197ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
+		DisableScriptedObjects (11ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (63ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (136ms)
-	LoadAllAssembliesAndSetupDomain (953ms)
-		LoadAssemblies (448ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (66ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (141ms)
+	LoadAllAssembliesAndSetupDomain (852ms)
+		LoadAssemblies (351ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (602ms)
-			TypeCache.Refresh (569ms)
-				TypeCache.ScanAssembly (549ms)
-			ScanForSourceGeneratedMonoScriptInfo (26ms)
-			ResolveRequiredComponents (7ms)
-	FinalizeReload (1079ms)
+		AnalyzeDomain (580ms)
+			TypeCache.Refresh (537ms)
+				TypeCache.ScanAssembly (510ms)
+			ScanForSourceGeneratedMonoScriptInfo (33ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (865ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (742ms)
+		SetupLoadedEditorAssemblies (619ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (58ms)
-			SetLoadedEditorAssemblies (11ms)
+			InitializePlatformSupportModulesInManaged (47ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (169ms)
-			ProcessInitializeOnLoadAttributes (456ms)
-			ProcessInitializeOnLoadMethodAttributes (39ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			BeforeProcessingInitializeOnLoad (129ms)
+			ProcessInitializeOnLoadAttributes (389ms)
+			ProcessInitializeOnLoadMethodAttributes (37ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
 Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 5,20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0,00 ms.
-Unloading 3161 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (49,6 KB). Loaded Objects now: 3639.
-Memory consumption went from 127,7 MB to 127,6 MB.
-Total: 10,593523 ms (FindLiveObjects: 0,459837 ms CreateObjectMapping: 0,563285 ms MarkObjects: 9,027541 ms  DeleteObjects: 0,540824 ms)
+Refreshing native plugins compatible for Editor in 4,84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,02 ms.
+Unloading 3169 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (49,3 KB). Loaded Objects now: 3653.
+Memory consumption went from 128,5 MB to 128,5 MB.
+Total: 6,527629 ms (FindLiveObjects: 0,477753 ms CreateObjectMapping: 0,421185 ms MarkObjects: 5,306182 ms  DeleteObjects: 0,320019 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -406,9 +406,9 @@ Memory Statistics:
       Overflow Count 0
     [ALLOC_TEMP_Background Job.worker 1]
       Initial Block Size 32,0 KB
-      Current Block Size 72,0 KB
-      Peak Allocated Bytes 33,8 KB
-      Overflow Count 0
+      Current Block Size 192,0 KB
+      Peak Allocated Bytes 150,3 KB
+      Overflow Count 2
     [ALLOC_TEMP_Background Job.worker 0]
       Initial Block Size 32,0 KB
       Current Block Size 32,0 KB
@@ -528,7 +528,7 @@ Memory Statistics:
     [ALLOC_DEFAULT_MAIN]
       Requested Block Size 16,0 MB
       Peak Block count 4
-      Peak Allocated memory 58,2 MB
+      Peak Allocated memory 58,6 MB
       Peak Large allocation bytes 0 B
     [ALLOC_DEFAULT_THREAD]
       Requested Block Size 16,0 MB
@@ -572,7 +572,7 @@ Memory Statistics:
       Peak Allocated memory 0 B
       Peak Large allocation bytes 0 B
 [ALLOC_CACHEOBJECTS] Dual Thread Allocator
-  Peak main deferred allocation count 15918
+  Peak main deferred allocation count 15958
     [ALLOC_BUCKET]
       Large Block size 32,0 MB
       Used Block count 1
@@ -580,7 +580,7 @@ Memory Statistics:
     [ALLOC_CACHEOBJECTS_MAIN]
       Requested Block Size 4,0 MB
       Peak Block count 11
-      Peak Allocated memory 41,0 MB
+      Peak Allocated memory 41,3 MB
       Peak Large allocation bytes 0 B
     [ALLOC_CACHEOBJECTS_THREAD]
       Requested Block Size 4,0 MB
@@ -588,7 +588,7 @@ Memory Statistics:
       Peak Allocated memory 0 B
       Peak Large allocation bytes 0 B
 [ALLOC_TYPETREE] Dual Thread Allocator
-  Peak main deferred allocation count 25281
+  Peak main deferred allocation count 25345
     [ALLOC_BUCKET]
       Large Block size 32,0 MB
       Used Block count 1
@@ -621,4 +621,4 @@ Memory Statistics:
       Large Block size 32,0 MB
       Used Block count 1
       Peak Allocated bytes 2,6 KB
-##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1688567052249,"processId":24354,"allocatedMemory":61269221,"memoryLabels":[{"Default":37571},{"Permanent":18267},{"Thread":1086448},{"Manager":3628515},{"VertexData":12},{"Geometry":408},{"Particles":17856},{"VFX":44},{"Texture":69593},{"Shader":427301},{"Material":3160},{"GfxDevice":225800},{"Animation":15046},{"Audio":4932},{"Font":1792},{"FontEngine":336},{"Physics":270357},{"Physics2D":153264},{"Serialization":4319046},{"Input":59520},{"JobScheduler":13087096},{"GarbageCollector":1049152},{"Mono":92},{"ScriptingNativeRuntime":7924736},{"BaseObject":1820175},{"Resource":3436},{"Renderer":7128},{"Transform":48},{"File":11999},{"Network":3352},{"WebCam":40},{"Culling":48},{"Terrain":1073},{"TerrainPhysics":8},{"Wind":24},{"STL":391680},{"String":7363757},{"DynamicArray":2733873},{"HashMap":1378403},{"Utility":2918750},{"PoolAlloc":1488},{"AI":59656},{"TypeTree":130835},{"ScriptManager":1487377},{"MonoScriptCache":529408},{"RuntimeInitializeOnLoadManager":72},{"SpriteAtlas":112},{"GI":16312},{"Director":7928},{"WebRequest":720},{"VR":45961},{"SceneManager":640},{"Video":256},{"LazyScriptCache":32},{"ManagedAttributeManager":1},{"TextureStreaming":1416},{"NativeArray":839},{"ScreenCapture":8},{"Camera":25},{"Secure":1},{"CrashReporter":1040},{"SerializationCache":1576},{"APIUpdating":11856},{"Subsystems":384},{"VirtualTexturing":59488},{"StaticSafetyDebugInfo":327680},{"EditorGui":4728292},{"EditorUtility":13111},{"VersionControl":4},{"Undo":736},{"AssetDatabase":4446679},{"AssetImporter":278635},{"RestService":2880},{"EditorGi":24528},{"ProgressiveLightmapper":11144},{"License":3144},{"UnityConnect":25432},{"Collab":25},{"Upm":1232},{"DrivenProperties":80},{"LocalIPC":120},{"ProfilerEditor":10991},{"CoreBusinessMetrics":2875},{"AssetReference":32},{"IPCStream":32}]}
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1688644977828,"processId":27242,"allocatedMemory":61982579,"memoryLabels":[{"Default":37571},{"Permanent":18619},{"Thread":1086448},{"Manager":3632611},{"VertexData":12},{"Geometry":408},{"Particles":17856},{"VFX":44},{"Texture":69593},{"Shader":524400},{"Material":3160},{"GfxDevice":225856},{"Animation":15046},{"Audio":4932},{"Font":1792},{"FontEngine":336},{"Physics":270357},{"Physics2D":153264},{"Serialization":4548171},{"Input":59520},{"JobScheduler":13087096},{"GarbageCollector":1049152},{"Mono":92},{"ScriptingNativeRuntime":7924736},{"BaseObject":1820175},{"Resource":3436},{"Renderer":7128},{"Transform":48},{"File":12003},{"Network":3352},{"WebCam":40},{"Culling":48},{"Terrain":1073},{"TerrainPhysics":8},{"Wind":24},{"STL":433152},{"String":7546335},{"DynamicArray":2855616},{"HashMap":1423433},{"Utility":2918750},{"PoolAlloc":1488},{"AI":59656},{"TypeTree":130835},{"ScriptManager":1486005},{"MonoScriptCache":523776},{"RuntimeInitializeOnLoadManager":72},{"SpriteAtlas":112},{"GI":16312},{"Director":7928},{"WebRequest":720},{"VR":45961},{"SceneManager":640},{"Video":256},{"LazyScriptCache":32},{"ManagedAttributeManager":1},{"TextureStreaming":1416},{"NativeArray":839},{"ScreenCapture":8},{"Camera":25},{"Secure":1},{"CrashReporter":1040},{"SerializationCache":1576},{"APIUpdating":11856},{"Subsystems":384},{"VirtualTexturing":59488},{"StaticSafetyDebugInfo":327680},{"EditorGui":4728292},{"EditorUtility":13111},{"VersionControl":4},{"Undo":736},{"AssetDatabase":4445486},{"AssetImporter":278635},{"RestService":2880},{"EditorGi":24528},{"ProgressiveLightmapper":11144},{"License":3144},{"UnityConnect":25432},{"Collab":25},{"Upm":1232},{"DrivenProperties":80},{"LocalIPC":120},{"ProfilerEditor":10991},{"CoreBusinessMetrics":2875},{"AssetReference":32},{"IPCStream":32}]}
