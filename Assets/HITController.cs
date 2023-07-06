@@ -59,6 +59,7 @@ public class HITController : MonoBehaviour
                     }
                 }
             }
+            
         }
         else
         {

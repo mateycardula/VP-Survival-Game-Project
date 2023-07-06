@@ -45,16 +45,15 @@
     <Analyzer Include="/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/Destroyable.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabExporter.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/ItemInventory.cs" />
-     <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ItemScriptableObject.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabPlugin.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabImporterWindow.cs" />
-     <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ResourceScriptableObject.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ISOHolder.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabModelWindow.cs" />
-     <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ToolScriptableObject.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabUI.cs" />
+     <Compile Include="Assets/Scripts/Scriptable Objects/ToolScriptableObject.cs" />
      <Compile Include="Assets/NewScript.cs" />
      <Compile Include="Assets/TestScript.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/EnemyObjects/EnemyScriptableObject.cs" />
@@ -63,21 +62,28 @@
      <Compile Include="Assets/Scripts/PlayerControllers/FPSController.cs" />
      <Compile Include="Assets/ResizeScript.cs" />
      <Compile Include="Assets/PlayerAnimationController.cs" />
+     <Compile Include="Assets/Scripts/Scriptable Objects/DestroyableScriptableObject.cs" />
      <Compile Include="Assets/HITController.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabLogger.cs" />
      <Compile Include="Assets/Scripts/CursorState.cs" />
      <Compile Include="Assets/Scripts/Tool.cs" />
+     <Compile Include="Assets/Scripts/Scriptable Objects/ItemScriptableObject.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/ToolInventory.cs" />
+     <Compile Include="Assets/tree.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/Tool Slot.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/Item Slot.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserManager.cs" />
+     <Compile Include="Assets/TreeSpawner.cs" />
      <Compile Include="Assets/InventoryItemsHolder.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserWindow.cs" />
      <Compile Include="Assets/InventoryInputManager.cs" />
+     <Compile Include="Assets/Scripts/Scriptable Objects/ResourceScriptableObject.cs" />
+     <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ISOAnimationController.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/Resizer.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/Inventory.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabApi.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets/Animations/LeftClickAnimations/Axe" />
      <Folder Include="Assets/Sketchfab For Unity" />
      <Folder Include="Assets/Scripts/Scriptable Objects" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -90,6 +96,7 @@
      <Folder Include="Assets/Scripts/PlayerControllers" />
      <Folder Include="Assets/Sketchfab For Unity/Dependencies/Shaders" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
+     <Folder Include="Assets/Graphics/Trees" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFColorSpace.cginc" />
      <Folder Include="Assets/Graphics/Sprites/Inventory/Item Sprites" />
      <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Axes" />
@@ -104,9 +111,11 @@
      <Folder Include="Assets/Scripts" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources" />
+     <Folder Include="Assets/Tree_Textures" />
      <Folder Include="Assets/Graphics/Models/Tools/Torch" />
      <Folder Include="Assets/Sketchfab For Unity/Dependencies/Resources" />
      <Folder Include="Assets/Graphics/Sprites/Inventory" />
+     <Folder Include="Assets/Animations/LeftClickAnimations" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/Sketchfab Axe" />
      <Folder Include="Assets/TextMesh Pro" />
@@ -129,6 +138,7 @@
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Scripts/Inventory Management" />
      <Folder Include="Assets/Scenes" />
+     <Folder Include="Assets/Scripts/Scriptable Objects/DestroyableObjects" />
      <Folder Include="Assets/Graphics/Models/Tools" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets/Graphics" />
@@ -145,6 +155,7 @@
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets/Graphics/Textures" />
      <Folder Include="Assets/Graphics/Sprites" />
      <Folder Include="Assets/Animations" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />

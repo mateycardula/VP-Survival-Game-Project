@@ -17,3 +17,4 @@ MonoBehaviour:
   description: Drveno drvo
   model: {fileID: 5188403426815820064, guid: c9b8f5b261036f86fafada8cf40d009e, type: 3}
   inventorySprite: {fileID: 21300000, guid: f26efcbfb8dc020379e697a0ed27bfda, type: 3}
+  OnLeftClickAnimationClip: {fileID: 0}

@@ -12,8 +12,8 @@ public class Tool : MonoBehaviour
     //public ToolScriptableObject tool;
     [SerializeField] private GameObject rightHand;
     [FormerlySerializedAs("empty")] [SerializeField] private ToolScriptableObject punch;
-
-    private ItemScriptableObject toolItem;
+    public ItemScriptableObject toolItem;
+   
     // Start is called before the first frame update
   
 
@@ -50,6 +50,7 @@ public class Tool : MonoBehaviour
         if (modelTool.GetComponent<BoxCollider>().enabled) modelTool.GetComponent<BoxCollider>().enabled = false;
         modelTool.gameObject.GetComponent<Rigidbody>().useGravity = false;
         modelTool.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        toolItem = tool;
     
         if (tool is ToolScriptableObject)
         {

@@ -36,6 +36,7 @@ public class InventoryInputManager : MonoBehaviour
     //TODO: Add bool third when ItemInventory is implemented
     public void SetEquipped(int id)
     {
+        //GetComponent<Animator>().Play("Idle State", 1);
         toolInventory.slots[0].isEquipped = false;
         toolInventory.slots[1].isEquipped = false;
         equippedToolInterface[0].SetActive(false);
