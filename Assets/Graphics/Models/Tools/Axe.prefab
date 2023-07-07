@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7994052676211040909}
-  - component: {fileID: -4928904497521168803}
   - component: {fileID: -184181129054125551}
   - component: {fileID: 2772896805735519054}
   - component: {fileID: 1000566273414252599}
+  - component: {fileID: 5168620949408894081}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Item
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3831051722696321606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.114, y: -0.187, z: 0.067311}
+  m_LocalPosition: {x: 10.816287, y: 0.64522564, z: 34.71995}
   m_LocalScale: {x: 1.8760545, y: 1.8760545, z: 1.8760545}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -36,27 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &-4928904497521168803
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3831051722696321606}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.27, y: 0.5955963, z: 0.30101362}
-  m_Center: {x: 0, y: 0.21344107, z: -0.07682757}
 --- !u!122 &-184181129054125551
 Halo:
   m_ObjectHideFlags: 0
@@ -109,6 +88,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &5168620949408894081
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3831051722696321606}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.10323002
+  m_Height: 0.53
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.12, z: -0.06}
 --- !u!1001 &8481216777297259805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,15 +129,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dca613780e465904fbe07f3ecb12db53, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dca613780e465904fbe07f3ecb12db53, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dca613780e465904fbe07f3ecb12db53, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dca613780e465904fbe07f3ecb12db53, type: 3}
       propertyPath: m_LocalPosition.x
@@ -181,6 +183,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: dca613780e465904fbe07f3ecb12db53, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2faddc4b9c14a8a268b0631ee35cd87d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030a9fde76ccea3bf8633c5528631aa1, type: 3}
   m_Name: Torch
   m_EditorClassIdentifier: 
+  stack: 0
   itemName: Torch
   description: Torch crafted by wood and coal
   model: {fileID: 1560536704585768433, guid: e64b0868b054c201bb5f803a9329a937, type: 3}
   inventorySprite: {fileID: 21300000, guid: f45b02a13eecf5a099faab8ac5dbf5ea, type: 3}
+  OnLeftClickAnimationClip: {fileID: 7400000, guid: babc26b7ac3348ed09ee4295b6013572, type: 2}
   attackSpeed: 2
   damage: 0
   isTwoHanded: 0

@@ -18,7 +18,6 @@ public class TreeSpawner : MonoBehaviour
         {
             treesArray[i] = Instantiate(trees[Random.Range(0, 4)]);
             treesArray[i].transform.position = new Vector3(Random.Range(30, 970), 70, Random.Range(30, 970));
-
         }
     }
 

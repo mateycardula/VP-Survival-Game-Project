@@ -8,6 +8,8 @@ public class InventoryInputManager : MonoBehaviour
     [SerializeField] private ToolInventory toolInventory;
     [SerializeField] private GameObject [] equippedToolInterface = new GameObject[2];
     [SerializeField] private Tool toolHolder;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,7 @@ public class InventoryInputManager : MonoBehaviour
         
         if(id != -1)
         {
+            
             toolInventory.slots[id].isEquipped = true;
             if(toolInventory.slots[id].tool !=null)
             {

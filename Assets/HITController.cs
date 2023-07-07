@@ -28,6 +28,11 @@ public class HITController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        collision();
+    }
+
+    public Collider collision()
+    {
         RaycastHit hit;
         Vector3 FrontObjectCheck = cameraObj.transform.TransformDirection(Vector3.forward) * 3f;
         if(Physics.Raycast(cameraObj.transform.position,cameraObj.transform.forward, out hit, 3f))
@@ -59,7 +64,6 @@ public class HITController : MonoBehaviour
                     }
                 }
             }
-            
         }
         else
         {
@@ -71,5 +75,6 @@ public class HITController : MonoBehaviour
             UICollectIndicator.SetActive(false);
             Debug.DrawRay(cameraObj.transform.position, FrontObjectCheck, Color.red);
         }
+        return hit.collider;
     }
 }

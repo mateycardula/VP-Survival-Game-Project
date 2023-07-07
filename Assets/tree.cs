@@ -5,16 +5,19 @@ using UnityEngine;
 public class tree : MonoBehaviour
 {
     private int groundCollisions = 0;
+    [SerializeField] public GameObject brokenTree;
+    
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Tree")
-        {
-            Destroy(gameObject);
-        }
+        // if (collision.collider.tag == "Destroyable")
+        // {
+        //     Destroy(gameObject);
+        // }
 
         if (collision.collider.tag == "Ground")
         {
-            groundCollisions++;
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;    
+            //groundCollisions++;
         }
     }
     
@@ -29,4 +32,5 @@ public class tree : MonoBehaviour
     {
         if(groundCollisions>3)   Destroy(gameObject);
     }
+    
 }

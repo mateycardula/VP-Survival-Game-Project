@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Destroyable : MonoBehaviour
 {
-    public int health;
+    public float health;
     public DestroyableScriptableObject dso;
     // Start is called before the first frame update
     void Start()

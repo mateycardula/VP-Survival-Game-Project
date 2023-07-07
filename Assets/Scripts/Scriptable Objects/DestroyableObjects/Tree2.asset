@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa87c05cb7a828a8b0a1f01692d0cff, type: 3}
+  m_Name: Tree2
+  m_EditorClassIdentifier: 
+  health: 100
+  brokenObject: {fileID: 4908245028494689782, guid: 5938858d484b1e428ac416e7c8437780, type: 3}
+  WeaknessList:
+  - {fileID: 11400000, guid: 6e116c34144a91ae0a5b59e2db60abad, type: 2}
+  StrenghtList: []
+  itemToDrop: {fileID: 5188403426815820064, guid: c9b8f5b261036f86fafada8cf40d009e, type: 3}
+  itemToDropCount: 3

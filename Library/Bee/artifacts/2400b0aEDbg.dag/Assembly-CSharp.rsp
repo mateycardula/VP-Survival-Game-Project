@@ -368,6 +368,7 @@
 "Assets/Scripts/Inventory Management/ItemInventory.cs"
 "Assets/Scripts/Inventory Management/Tool Slot.cs"
 "Assets/Scripts/Inventory Management/ToolInventory.cs"
+"Assets/Scripts/PlayerControllers/Attack.cs"
 "Assets/Scripts/PlayerControllers/FPSController.cs"
 "Assets/Scripts/Scriptable Objects/DestroyableScriptableObject.cs"
 "Assets/Scripts/Scriptable Objects/EnemyObjects/EnemyScriptableObject.cs"

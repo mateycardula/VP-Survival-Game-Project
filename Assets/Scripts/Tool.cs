@@ -10,15 +10,19 @@ public class Tool : MonoBehaviour
     
     public GameObject modelTool;
     //public ToolScriptableObject tool;
-    [SerializeField] private GameObject rightHand;
+    [SerializeField] private GameObject leftHand, rightHand;
     [FormerlySerializedAs("empty")] [SerializeField] private ToolScriptableObject punch;
     public ItemScriptableObject toolItem;
-   
+    
+    [SerializeField] private Attack attackScriptToSetTime;
+
+    private Animator rightHandAnimator;
     // Start is called before the first frame update
   
 
     void Start()
     {
+        rightHandAnimator = rightHand.GetComponent<Animator>();
         UpdateToolModel();
         modelTool.transform.position = transform.position;
     }
@@ -28,17 +32,19 @@ public class Tool : MonoBehaviour
         if (!modelTool.Equals(null))
             GameObject.Destroy(modelTool);
         
+        rightHandAnimator.Play("New State", 1);
+        
         if (tool == null)
         {
             toolItem = punch;
             modelTool = Instantiate(punch.model);
             modelTool.transform.SetParent(transform);
             modelTool.transform.position = transform.position;
-            if (modelTool.GetComponent<BoxCollider>().enabled) modelTool.GetComponent<BoxCollider>().enabled = false;
+            if (modelTool.GetComponent<CapsuleCollider>().enabled) modelTool.GetComponent<CapsuleCollider>().enabled = false;
             modelTool.gameObject.GetComponent<Rigidbody>().useGravity = false;
             modelTool.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             //Component.Destroy();
-            rightHand.SetActive(false);
+            leftHand.SetActive(false);
             return;
         }
         
@@ -47,25 +53,30 @@ public class Tool : MonoBehaviour
         modelTool.transform.SetParent(transform);
         modelTool.transform.position = transform.position;
         modelTool.transform.rotation = transform.rotation;
-        if (modelTool.GetComponent<BoxCollider>().enabled) modelTool.GetComponent<BoxCollider>().enabled = false;
+        if (modelTool.GetComponent<CapsuleCollider>().enabled) modelTool.GetComponent<CapsuleCollider>().enabled = false;
         modelTool.gameObject.GetComponent<Rigidbody>().useGravity = false;
         modelTool.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         toolItem = tool;
+
+        if (toolItem.OnLeftClickAnimationClip != null)
+        {
+            attackScriptToSetTime.ResetSpamTimer(tool.OnLeftClickAnimationClip.length);
+        }
     
         if (tool is ToolScriptableObject)
         {
             if ((tool as ToolScriptableObject).isTwoHanded)
             {
-                rightHand.SetActive(true);
+                leftHand.SetActive(true);
             }
             else
             {
-                rightHand.SetActive(false);
+                leftHand.SetActive(false);
             }
         }
         else
         {
-            rightHand.SetActive(false);
+            leftHand.SetActive(false);
         }
     }
 

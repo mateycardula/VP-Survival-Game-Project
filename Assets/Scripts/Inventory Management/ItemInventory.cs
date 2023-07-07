@@ -11,6 +11,10 @@ public class ItemInventory : Inventory
     [SerializeField] private InventoryItemsHolder ItemSlotsUI;
 
     [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private InventoryItemsHolder UIitemsHolder;
+    [SerializeField] private GameObject toolHolderEmptyObject; 
+    
+    public int selectedId = -1;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,8 @@ public class ItemInventory : Inventory
             {
                 Cursor.lockState = CursorLockMode.Confined;
                 inventoryPanel.SetActive(true);
+                UIitemsHolder.selectItem(-1, -1);
+                selectedId = -1;
             }
             else
             {
@@ -74,9 +80,66 @@ public class ItemInventory : Inventory
         return iso;
     }
 
-    protected override ItemScriptableObject DropItem(int itemSlotID)
+    public override ItemScriptableObject DropItem(int i)
     {
-        throw new System.NotImplementedException();
+        if(selectedId != -1)
+        {
+            int count = slots[selectedId].count;
+            ItemScriptableObject iso = slots[selectedId].tool;
+            if (count == 1)
+            {
+                slots[selectedId] = new ToolSlot();
+            }
+            else
+            {
+                slots[selectedId] = new ToolSlot(iso, count - 1);
+            }
+            
+            
+            
+            UpdateInterface(selectedId);
+        }
+
+        return null;
+    }
+
+    public void Drop()
+    {
+        if(selectedId != -1)
+        {
+            int count = slots[selectedId].count;
+            ItemScriptableObject iso = slots[selectedId].tool;
+            
+            ItemScriptableObject dropped = slots[selectedId].tool;
+            GameObject toolToDrop = dropped.model;
+            toolToDrop.transform.position = toolHolderEmptyObject.transform.position + Vector3.up*2;
+            // toolToDrop.transform.position += Vector3.forward*2;
+            Instantiate(toolToDrop);
+            toolToDrop.GetComponent<Rigidbody>().AddForce(Vector3.forward*5, ForceMode.Impulse);
+            
+            if (count == 1)
+            {
+                slots[selectedId] = new ToolSlot();
+                selectedId = -1;
+            }
+            else
+            {
+                slots[selectedId] = new ToolSlot(iso, count - 1);
+            }
+            UpdateInterface(selectedId);
+        }
+    }
+
+    public void DropAll()
+    {
+        if (selectedId != -1)
+        {
+            int dropItemsCount = slots[selectedId].count;
+            for (int i = 0; i < dropItemsCount; i++)
+            {
+                Drop();
+            }
+        }
     }
 
     private int FindFirstNonFullISOslot(ItemScriptableObject iso)
@@ -112,9 +175,16 @@ public class ItemInventory : Inventory
         }
         else
         {
-            ItemSlotsUI.items[id].SetActive(true);
-            ItemSlotsUI.items[id].GetComponentInChildren<Text>().text = slots[id].count.ToString();
-            ItemSlotsUI.items[id].GetComponent<Image>().sprite = slots[id].tool.inventorySprite;
+            if (slots[id].tool != null)
+            {
+                ItemSlotsUI.items[id].SetActive(true);
+                ItemSlotsUI.items[id].GetComponentInChildren<Text>().text = slots[id].count.ToString();
+                ItemSlotsUI.items[id].GetComponent<Image>().sprite = slots[id].tool.inventorySprite;
+            }
+            else
+            {
+                ItemSlotsUI.items[id].SetActive(false);
+            }
         }
     }
 
@@ -124,5 +194,17 @@ public class ItemInventory : Inventory
         {
             slots[i] = new ToolSlot();
         }
+    }
+    
+    public void selectItem(int id)
+    {
+        Debug.Log("SelectItem");
+        if (selectedId != -1)
+        {
+            UIitemsHolder.selectItem(id, selectedId);
+        }
+        UIitemsHolder.selectItem(id);
+        selectedId = id;
+
     }
 }

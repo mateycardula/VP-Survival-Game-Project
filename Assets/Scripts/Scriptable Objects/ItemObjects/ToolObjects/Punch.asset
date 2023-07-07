@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 030a9fde76ccea3bf8633c5528631aa1, type: 3}
   m_Name: Punch
   m_EditorClassIdentifier: 
+  stack: 0
   itemName: Punch
   description: 
   model: {fileID: 6973856054268898478, guid: 943b287568fbf24d5a33362239854525, type: 3}
   inventorySprite: {fileID: 0}
+  OnLeftClickAnimationClip: {fileID: 7400000, guid: 71d0101ab62af2e05a09b8ce948c13ce, type: 2}
   attackSpeed: 0.5
   damage: 5
+  isTwoHanded: 0

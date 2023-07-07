@@ -10,10 +10,10 @@ public class ToolInventory : Inventory
 {
     private ToolSlot prevEquipped;
     [SerializeField] private GameObject[] toolSpritesUI = new GameObject[2];
-
     [SerializeField] private Tool toolHolder;
+    [SerializeField] private GameObject toolHolderEmptyObject; 
     [SerializeField] private InventoryInputManager invManager;
-
+   
     // Start is called before the first frame update
     
     void Start()
@@ -96,14 +96,22 @@ public class ToolInventory : Inventory
         return iso;
     }
 
-    protected override ItemScriptableObject DropItem(int itemSlotID)
+    public override ItemScriptableObject DropItem(int itemSlotID)
     {
         //TODO: Kreiraj instanca od modelot pred covekot i aktiviraj useGravity od rigidBody
-        ToolScriptableObject dropped = slots[itemSlotID].tool as ToolScriptableObject; 
+        ToolScriptableObject dropped = slots[itemSlotID].tool as ToolScriptableObject;
+        GameObject toolToDrop = dropped.model;
         slots[itemSlotID] = new ToolSlot();
+        toolToDrop.transform.position = toolHolderEmptyObject.transform.position;
+        Instantiate(toolToDrop);
+        
+        toolToDrop.GetComponent<Rigidbody>().AddForce(Vector3.up*5, ForceMode.Impulse);
         itemCount--;
+        invManager.SetEquipped(-1);
+        UpdateInterface();
         return dropped;
     }
+    
 
     private ToolScriptableObject GetEquippedTool()
     {
@@ -147,7 +155,9 @@ public class ToolInventory : Inventory
     {
         DropItem(id);
         slots[id] = new ToolSlot(iso as ToolScriptableObject);
-        itemCount++;      
+        itemCount++;     
+        UpdateInterface();
+        
     }
     
     protected override void UpdateInterface(int id = -1)
@@ -162,4 +172,6 @@ public class ToolInventory : Inventory
             }
         }
     }
+    
+   
 }

@@ -15,7 +15,7 @@ public abstract class  Inventory : MonoBehaviour
     public int inventoryCapacity, itemCount;
 
     public abstract ItemScriptableObject CollectItem(ItemScriptableObject iso);
-    protected abstract ItemScriptableObject DropItem(int itemSlotID);
+    public abstract ItemScriptableObject DropItem(int itemSlotID);
     protected abstract void UpdateInterface(int id =-1);
 
     
