@@ -45,6 +45,7 @@
     <Analyzer Include="/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/Build System/BuildSystem.cs" />
      <Compile Include="Assets/Scripts/Destroyable.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabExporter.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/ItemInventory.cs" />
@@ -53,6 +54,7 @@
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ResourceScriptableObject.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ISOHolder.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabModelWindow.cs" />
+     <Compile Include="Assets/Scripts/Scriptable Objects/ConsumableScriptableObject.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabUI.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ToolScriptableObject.cs" />
      <Compile Include="Assets/NewScript.cs" />
@@ -65,6 +67,7 @@
      <Compile Include="Assets/PlayerAnimationController.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/DestroyableScriptableObject.cs" />
      <Compile Include="Assets/HITController.cs" />
+     <Compile Include="Assets/Scripts/PlayerControllers/PlayerVitality.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabLogger.cs" />
      <Compile Include="Assets/Scripts/CursorState.cs" />
      <Compile Include="Assets/Scripts/Tool.cs" />
@@ -79,6 +82,7 @@
      <Compile Include="Assets/InventoryItemsHolder.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabBrowserWindow.cs" />
      <Compile Include="Assets/InventoryInputManager.cs" />
+     <Compile Include="Assets/Scripts/UI/UI Vitality.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ISOAnimationController.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/Resizer.cs" />
      <Compile Include="Assets/Scripts/Inventory Management/Inventory.cs" />
@@ -87,7 +91,9 @@
      <Folder Include="Assets/Animations/LeftClickAnimations/Axe" />
      <Folder Include="Assets/Sketchfab For Unity" />
      <Folder Include="Assets/Scripts/Scriptable Objects" />
+     <Folder Include="Assets/Scripts/Build System" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+     <Folder Include="Assets/Animations/LeftClickAnimations/Ham" />
      <Folder Include="Assets/Sketchfab For Unity/Dependencies" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
@@ -104,6 +110,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/Graphics/Models/Resources" />
      <Folder Include="Assets/Graphics/Sprites/Inventory/Materials" />
+     <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects/InventoryItems/Consumables" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFPackOccMetalRough.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources/Fonts &amp; Materials" />
      <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Uvs" />
@@ -118,10 +125,12 @@
      <Folder Include="Assets/Graphics/Sprites/Inventory" />
      <Folder Include="Assets/Animations/LeftClickAnimations" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+     <Folder Include="Assets/Graphics/Models/Consumabkes" />
      <Folder Include="Assets/Sketchfab Axe" />
      <Folder Include="Assets/TextMesh Pro" />
      <Folder Include="Assets/Graphics/Models/Resources/Wood" />
      <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects/ToolObjects" />
+     <Folder Include="Assets/Graphics/Models/Consumabkes/Simple Foods/Mesh Form" />
      <Folder Include="Assets/Tree1-Broken_Textures" />
      <Folder Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
@@ -132,7 +141,9 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets/Tree0-Broken_Textures" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+     <Folder Include="Assets/Graphics/Models/Consumabkes/Simple Foods/Prefab Form" />
      <Folder Include="Assets/Materials" />
+     <Folder Include="Assets/Scripts/UI" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/TextMesh Pro/Shaders" />
@@ -140,6 +151,7 @@
      <Folder Include="Assets/TextMesh Pro/Fonts" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Scripts/Inventory Management" />
+     <Folder Include="Assets/Graphics/Models/Consumabkes/Simple Foods" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/Scripts/Scriptable Objects/DestroyableObjects" />
      <Folder Include="Assets/Graphics/Models/Tools" />
@@ -147,6 +159,7 @@
      <Folder Include="Assets/Graphics" />
      <Folder Include="Assets/Tree2-broken_Textures" />
      <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Axes/Materials" />
+     <Folder Include="Assets/Graphics/Sprites/Inventory/Item Sprites/Items" />
      <Folder Include="Assets/Animations/TorchHalo" />
      <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Prefabs" />
      <Folder Include="Assets/Graphics/Models" />

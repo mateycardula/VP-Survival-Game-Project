@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6971db27f7ef79193b7aaa0f2422bec7, type: 3}
+  m_Name: Meat
+  m_EditorClassIdentifier: 
+  stack: 2
+  itemName: "\u041C\u0435\u0441\u043E"
+  description: "\u0421\u0435 \u043A\u043E\u0440\u0438\u0441\u0442\u0438 \u0437\u0430
+    \u043D\u0430\u043C\u0430\u043B\u0443\u0432\u0430\u045A\u0435 \u043D\u0430 \u0433\u043B\u0430\u0434"
+  model: {fileID: 3517465817000159781, guid: ba43438e580714421b77702924702e2b, type: 3}
+  inventorySprite: {fileID: 21300000, guid: a7abfc77f969917d8b4f5d6e28b9f9d2, type: 3}
+  OnLeftClickAnimationClip: {fileID: 7400000, guid: af1c6ce1c65d7130b82511e9edd58da7, type: 2}
+  hungerChange: 20
+  thirstChange: -5

@@ -12,7 +12,7 @@ public class ToolInventory : Inventory
     [SerializeField] private GameObject[] toolSpritesUI = new GameObject[2];
     [SerializeField] private Tool toolHolder;
     [SerializeField] private GameObject toolHolderEmptyObject; 
-    [SerializeField] private InventoryInputManager invManager;
+    
    
     // Start is called before the first frame update
     
@@ -96,7 +96,7 @@ public class ToolInventory : Inventory
         return iso;
     }
 
-    public override ItemScriptableObject DropItem(int itemSlotID)
+    public override ItemScriptableObject DropItem(int itemSlotID, bool shouldConsume = false)
     {
         //TODO: Kreiraj instanca od modelot pred covekot i aktiviraj useGravity od rigidBody
         ToolScriptableObject dropped = slots[itemSlotID].tool as ToolScriptableObject;

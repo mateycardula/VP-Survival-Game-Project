@@ -14,7 +14,7 @@ public class ItemInventory : Inventory
     [SerializeField] private InventoryItemsHolder UIitemsHolder;
     [SerializeField] private GameObject toolHolderEmptyObject; 
     
-    public int selectedId = -1;
+    public int selectedId = -1, equippedId = -1;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +37,8 @@ public class ItemInventory : Inventory
                 Cursor.lockState = CursorLockMode.Confined;
                 inventoryPanel.SetActive(true);
                 UIitemsHolder.selectItem(-1, -1);
-                selectedId = -1;
+                SetSelectedID(-1);
+                //selectedId = -1;
             }
             else
             {
@@ -50,7 +51,8 @@ public class ItemInventory : Inventory
     public override ItemScriptableObject CollectItem(ItemScriptableObject iso)
     {
         Debug.Log(iso.name);
-        int id = FindFirstNonFullISOslot(iso as ResourceScriptableObject);
+        //int id = FindFirstNonFullISOslot(iso as ResourceScriptableObject);
+        int id = FindFirstNonFullISOslot(iso);
         bool collected = false;
         if (id == -1)
         {
@@ -80,7 +82,7 @@ public class ItemInventory : Inventory
         return iso;
     }
 
-    public override ItemScriptableObject DropItem(int i)
+    public override ItemScriptableObject DropItem(int i, bool shouldConsume)
     {
         if(selectedId != -1)
         {
@@ -109,7 +111,6 @@ public class ItemInventory : Inventory
         {
             int count = slots[selectedId].count;
             ItemScriptableObject iso = slots[selectedId].tool;
-            
             ItemScriptableObject dropped = slots[selectedId].tool;
             GameObject toolToDrop = dropped.model;
             toolToDrop.transform.position = toolHolderEmptyObject.transform.position + Vector3.up*2;
@@ -119,8 +120,15 @@ public class ItemInventory : Inventory
             
             if (count == 1)
             {
+                
                 slots[selectedId] = new ToolSlot();
-                selectedId = -1;
+
+                if (selectedId == equippedId)
+                {
+                    invManager.SetEquipped(-1);
+                }
+                //selectedId = -1;
+                SetSelectedID(-1);
             }
             else
             {
@@ -128,6 +136,26 @@ public class ItemInventory : Inventory
             }
             UpdateInterface(selectedId);
         }
+    }
+
+    public void Consume(int consumeID)
+    {
+        ItemScriptableObject iso = slots[consumeID].tool;
+        int count = slots[consumeID].count;
+        
+        if (count == 1)
+        {
+                
+            slots[consumeID] = new ToolSlot();
+            invManager.SetEquipped(-1);
+            //selectedId = -1;
+            SetSelectedID(-1);
+        }
+        else
+        {
+            slots[selectedId] = new ToolSlot(iso, count - 1);
+        }
+        UpdateInterface(selectedId);
     }
 
     public void DropAll()
@@ -187,6 +215,8 @@ public class ItemInventory : Inventory
             }
         }
     }
+    
+    
 
     private void slotsInit()
     {
@@ -204,7 +234,21 @@ public class ItemInventory : Inventory
             UIitemsHolder.selectItem(id, selectedId);
         }
         UIitemsHolder.selectItem(id);
-        selectedId = id;
+        //selectedId = id;
+        SetSelectedID(id);
+    }
 
+    public void Equip()
+    {
+        if (selectedId != -1)
+        {
+            invManager.SetEquipped(3);
+            equippedId = selectedId;
+        }
+    }
+
+    public void SetSelectedID(int id)
+    {
+        selectedId = id;
     }
 }

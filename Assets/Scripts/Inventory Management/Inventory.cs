@@ -11,11 +11,11 @@ public abstract class  Inventory : MonoBehaviour
     // [SerializeField] private ToolInventory toolInv;
 
     protected bool firstSlot, secondSlot, thirdSlot;
-    
+    [SerializeField] protected InventoryInputManager invManager;
     public int inventoryCapacity, itemCount;
 
     public abstract ItemScriptableObject CollectItem(ItemScriptableObject iso);
-    public abstract ItemScriptableObject DropItem(int itemSlotID);
+    public abstract ItemScriptableObject DropItem(int itemSlotID, bool shouldConsume = false);
     protected abstract void UpdateInterface(int id =-1);
 
     

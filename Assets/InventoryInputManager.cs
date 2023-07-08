@@ -6,9 +6,11 @@ using UnityEngine;
 public class InventoryInputManager : MonoBehaviour
 {
     [SerializeField] private ToolInventory toolInventory;
+    [SerializeField] private ItemInventory itemInventory;
     [SerializeField] private GameObject [] equippedToolInterface = new GameObject[2];
     [SerializeField] private Tool toolHolder;
-
+    [SerializeField] private Attack attackScript;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,16 @@ public class InventoryInputManager : MonoBehaviour
         equippedToolInterface[0].SetActive(false);
         equippedToolInterface[1].SetActive(false);
         
+        attackScript.changed = true;
+        //attackScript.ResetSpamTimer();
+
+        if (id == 3)
+        {
+            toolHolder.UpdateToolModel(itemInventory.slots[itemInventory.selectedId].tool);
+            
+            return;
+        }
+        
         if(id != -1)
         {
             
@@ -61,5 +73,7 @@ public class InventoryInputManager : MonoBehaviour
         {
             toolHolder.UpdateToolModel();
         }
+
+        itemInventory.equippedId = -1;
     }
 }

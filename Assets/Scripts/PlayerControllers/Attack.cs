@@ -9,17 +9,23 @@ public class Attack : MonoBehaviour
 {
     [SerializeField] private HITController checkCollider;
     [SerializeField] private Tool attackingTool;
+    [SerializeField] private ItemInventory itemInventoryScript;
+    
+    private PlayerVitality vitalityController;
     private Collider collider;
 
-    public float time = 2;
-
-    public float timer = 2;
+    public bool changed = false;
+    public float time;
+    public float timer;
+    
     // Start is called before the first frame update
     void Start()
     {
+        vitalityController = GetComponent<PlayerVitality>();
         Debug.Log("ALO");
-        StartCoroutine(HitDestroyableObject());
+        //StartCoroutine(HitDestroyableObject());
         Debug.Log("ALO");
+        
     }
 
     // Update is called once per frame
@@ -49,35 +55,61 @@ public class Attack : MonoBehaviour
     {
         Debug.Log("Ej");
         collider = checkCollider.collision();
-        if (collider.tag == "Destroyable")
+        //Proverka dali e napad
+        changed = false;
+        if(attackingTool.toolItem is ToolScriptableObject)
         {
-            Destroyable destroyableData = collider.GetComponent<Destroyable>();
-            if (destroyableData.dso.WeaknessList.Contains(attackingTool.toolItem as ToolScriptableObject))
+            if (collider.tag == "Destroyable")
             {
+                float damage = (attackingTool.toolItem as ToolScriptableObject).damage;
+                Destroyable destroyableData = collider.GetComponent<Destroyable>();
+
+                if (destroyableData.dso.WeaknessList.Contains(attackingTool.toolItem as ToolScriptableObject))
+                    damage *= 2.0f;
+                
+                // if (destroyableData.dso.WeaknessList.Contains(attackingTool.toolItem as ToolScriptableObject))
+                // {
+                //     yield return new WaitForSeconds(attackingTool.toolItem.OnLeftClickAnimationClip.length);
+                //     if (changed) yield break;
+                //     destroyableData.health -= (attackingTool.toolItem as ToolScriptableObject).damage * 2;
+                // }
+                
                 yield return new WaitForSeconds(attackingTool.toolItem.OnLeftClickAnimationClip.length);
+                if (changed) yield break;
                 destroyableData.health -= (attackingTool.toolItem as ToolScriptableObject).damage * 2;
-            }
-            if(destroyableData.health<=0)
-            {
-                Vector3 treePos = collider.transform.position;
-                Collider colliderCP = collider;
-                //StartCoroutine(waitEnumerator(colliderCP, destroyableData, 3, destroyableData.dso.itemToDrop));
-                DropLoot(collider, destroyableData);
-                Destroy(collider.gameObject);
-                if (destroyableData.dso.brokenObject != null)
+
+                if (destroyableData.health <= 0)
                 {
-                    GameObject brokenObjectToSpawn;
-                    brokenObjectToSpawn = Instantiate(destroyableData.dso.brokenObject);
-                    brokenObjectToSpawn.transform.position = treePos;
-                } 
+                    Vector3 treePos = collider.transform.position;
+                    Collider colliderCP = collider;
+                    //StartCoroutine(waitEnumerator(colliderCP, destroyableData, 3, destroyableData.dso.itemToDrop));
+                    DropLoot(collider, destroyableData);
+                    Destroy(collider.gameObject);
+                    if (destroyableData.dso.brokenObject != null)
+                    {
+                        GameObject brokenObjectToSpawn;
+                        brokenObjectToSpawn = Instantiate(destroyableData.dso.brokenObject);
+                        brokenObjectToSpawn.transform.position = treePos;
+                    }
+                }
             }
+        }
+
+        if (attackingTool.toolItem is ConsumableScriptableObject)
+        {
+            int consumeID = itemInventoryScript.equippedId;
+            yield return new WaitForSeconds(attackingTool.toolItem.OnLeftClickAnimationClip.length);
+            if(changed) yield break;
+            vitalityController.setHunger((attackingTool.toolItem as ConsumableScriptableObject).hungerChange,
+                (attackingTool.toolItem as ConsumableScriptableObject).thirstChange);
+            itemInventoryScript.Consume(consumeID);
         }
       
     }
 
-    public void ResetSpamTimer(float setTime)
+    public void ResetSpamTimer(float setTimer)
     {
-        timer = setTime/2.5f;
-        time = timer;
+        timer = 0;
+        time = setTimer;
     }
 }
