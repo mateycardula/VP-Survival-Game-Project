@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030a9fde76ccea3bf8633c5528631aa1, type: 3}
+  m_Name: Hammer
+  m_EditorClassIdentifier: 
+  stack: 0
+  itemName: "\u0427\u0435\u043A\u0430\u043D"
+  description: "\u0421\u0435 \u043A\u043E\u0440\u0438\u0441\u0442\u0438 \u0437\u0430
+    \u0433\u0440\u0430\u0434\u0435\u045A\u0435 \u043D\u0430 \u043E\u0431\u0458\u0435\u043A\u0442\u0438"
+  model: {fileID: 5678941339011566838, guid: f78cc170479abaf49ad95f856b5f04d7, type: 3}
+  inventorySprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  OnLeftClickAnimationClip: {fileID: 0}
+  attackSpeed: 0
+  damage: 5
+  isTwoHanded: 0
+  isBuildingTool: 1

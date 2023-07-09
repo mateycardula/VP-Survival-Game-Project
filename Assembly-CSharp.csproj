@@ -55,6 +55,7 @@
      <Compile Include="Assets/Scripts/Scriptable Objects/ItemObjects/ISOHolder.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser/SketchfabModelWindow.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ConsumableScriptableObject.cs" />
+     <Compile Include="Assets/Scripts/Scriptable Objects/BuldingScriptableObject.cs" />
      <Compile Include="Assets/Sketchfab For Unity/Scripts/SketchfabUI.cs" />
      <Compile Include="Assets/Scripts/Scriptable Objects/ToolScriptableObject.cs" />
      <Compile Include="Assets/NewScript.cs" />
@@ -111,6 +112,7 @@
      <Folder Include="Assets/Graphics/Models/Resources" />
      <Folder Include="Assets/Graphics/Sprites/Inventory/Materials" />
      <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects/InventoryItems/Consumables" />
+     <Folder Include="Assets/Graphics/Models/Tools/Polygon-Lite Survival Collection" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFPackOccMetalRough.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources/Fonts &amp; Materials" />
      <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Uvs" />
@@ -131,6 +133,7 @@
      <Folder Include="Assets/Graphics/Models/Resources/Wood" />
      <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects/ToolObjects" />
      <Folder Include="Assets/Graphics/Models/Consumabkes/Simple Foods/Mesh Form" />
+     <Folder Include="Assets/Graphics/Models/Tools/Polygon-Lite Survival Collection/Prefabs" />
      <Folder Include="Assets/Tree1-Broken_Textures" />
      <Folder Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
@@ -162,12 +165,15 @@
      <Folder Include="Assets/Graphics/Sprites/Inventory/Item Sprites/Items" />
      <Folder Include="Assets/Animations/TorchHalo" />
      <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Prefabs" />
+     <Folder Include="Assets/Graphics/Models/Tools/Polygon-Lite Survival Collection/Materials" />
      <Folder Include="Assets/Graphics/Models" />
      <Folder Include="Assets/Sketchfab For Unity/Dependencies/Libraries" />
+     <Folder Include="Assets/Graphics/Models/Tools/Polygon-Lite Survival Collection/Models" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <None Include="Assets/Graphics/Models/Tools/Axes_and_Hammers/Readme.txt" />
      <None Include="Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFBumpToNormal.shader" />
+     <Folder Include="Assets/Graphics/Models/Tools/Polygon-Lite Survival Collection/Textures" />
      <Folder Include="Assets/Graphics/Models/Tools/Axes_and_Hammers" />
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/TextMesh Pro/Documentation" />

@@ -157,6 +157,8 @@ public class ItemInventory : Inventory
         }
         UpdateInterface(selectedId);
     }
+    
+    
 
     public void DropAll()
     {

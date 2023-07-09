@@ -372,6 +372,7 @@
 "Assets/Scripts/PlayerControllers/Attack.cs"
 "Assets/Scripts/PlayerControllers/FPSController.cs"
 "Assets/Scripts/PlayerControllers/PlayerVitality.cs"
+"Assets/Scripts/Scriptable Objects/BuldingScriptableObject.cs"
 "Assets/Scripts/Scriptable Objects/ConsumableScriptableObject.cs"
 "Assets/Scripts/Scriptable Objects/DestroyableScriptableObject.cs"
 "Assets/Scripts/Scriptable Objects/EnemyObjects/EnemyScriptableObject.cs"
