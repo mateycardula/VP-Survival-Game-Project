@@ -7,10 +7,13 @@ public class InventoryInputManager : MonoBehaviour
 {
     [SerializeField] private ToolInventory toolInventory;
     [SerializeField] private ItemInventory itemInventory;
-    [SerializeField] private GameObject [] equippedToolInterface = new GameObject[2];
+    [SerializeField] private GameObject [] equippedToolInterface = new GameObject[3];
     [SerializeField] private Tool toolHolder;
     [SerializeField] private Attack attackScript;
-    
+
+
+
+    [SerializeField] private BuildSystem buildSystemScript;
     
     // Start is called before the first frame update
     void Start()
@@ -45,9 +48,11 @@ public class InventoryInputManager : MonoBehaviour
         toolInventory.slots[1].isEquipped = false;
         equippedToolInterface[0].SetActive(false);
         equippedToolInterface[1].SetActive(false);
-        
+        equippedToolInterface[2].SetActive(false);
         attackScript.changed = true;
         //attackScript.ResetSpamTimer();
+        
+        buildSystemScript.setBSO(null);
 
         if (id == 3)
         {
@@ -62,9 +67,11 @@ public class InventoryInputManager : MonoBehaviour
             toolInventory.slots[id].isEquipped = true;
             if(toolInventory.slots[id].tool !=null)
             {
+                if((toolInventory.slots[id].tool as ToolScriptableObject).isBuildingTool) equippedToolInterface[2].SetActive(true);
                 equippedToolInterface[id].SetActive(true);
             }
             else equippedToolInterface[id].SetActive(false);
+            
             
             toolHolder.UpdateToolModel(toolInventory.slots[id].tool);
             

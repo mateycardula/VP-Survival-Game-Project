@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28012fc81e12892aeb25c9e6b23cbaa7, type: 3}
+  m_Name: Window
+  m_EditorClassIdentifier: 
+  building: {fileID: 5853133772548012794, guid: 30804d22b74a578f4bf32f888772c4ea, type: 3}
+  canBuildIndicator: {fileID: 5853133772548012794, guid: a2bb986f3653a45feb2e9ba39a6120df, type: 3}
+  buildingMaterials:
+  - {fileID: 11400000, guid: cb005a0e5d936a86e8e4eb5c834bb04b, type: 2}
+  countOfMaterials: 02000000
+  isWall: 1
+  isFloor: 0

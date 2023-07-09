@@ -6,46 +6,54 @@ using UnityEngine.Serialization;
 public class BuildSystem : MonoBehaviour
 {
     // Start is called before the first frame update
-    [FormerlySerializedAs("floorIndicator")] [SerializeField] public Transform indicator;
-    [SerializeField] public GameObject building;
+    [SerializeField] private BuldingScriptableObject bso;
     [SerializeField] private GameObject player;
-    public bool wallBuilding, floorBuilding;
+    private Transform indicator;
     private Vector3 FrontObjectCheck;
+    public GameObject temp;
+
+    [SerializeField] private ItemInventory itemInventoryScript;
+
+    [SerializeField] private Material canBuildMaterial, cannotBuildMaterial, invisibleMaterial;
     void Start()
     {
-       
+        
+
     }
 
-    // Update is called once per frame
+    // // Update is called once per frame
     void Update()
     {
         RaycastHit hit;
         FrontObjectCheck = transform.TransformDirection(Vector3.forward) * 10f;
         Debug.DrawRay(transform.position, FrontObjectCheck, Color.yellow);
-        if(isBuildingOn())
+        if(bso != null)
         {
+            InstantiateIndicator(EnoughMaterials());
             if (Physics.Raycast(transform.position, transform.forward, out hit, 10f))
             {
                 
                 if ((hit.collider.tag == "Ground" || hit.collider.tag == "Floor"))
                 {
-                    indicator.gameObject.SetActive(true);
-                    Debug.Log(hit.collider.tag);
-                    if(floorBuilding && hit.collider.tag == "Ground" && hit.distance>4.0f)
+                    temp.gameObject.SetActive(true);
+                    Debug.Log(indicator.position.ToString());
+                   // temp.gameObject.SetActive(true);
+                   
+                    if(bso.isFloor && hit.collider.tag == "Ground" && hit.distance>4.0f)
                     {
                         indicator.position = new Vector3(Mathf.RoundToInt(hit.point.x / 6) * 6,
                             Mathf.RoundToInt(hit.point.y) >= hit.point.y
                                 ? Mathf.RoundToInt(hit.point.y/6)*6
                                 : Mathf.RoundToInt(hit.point.y/6)*6,
                             Mathf.RoundToInt(hit.point.z / 6) * 6);
-                        if (Input.GetKeyDown(KeyCode.Mouse0))
-                        {
-                            building.GetComponent<Transform>().position= indicator.position;
-                            Instantiate(building);
-                        }
+                        // if (Input.GetKeyDown(KeyCode.Mouse0))
+                        // {
+                        //     bso.building.GetComponent<Transform>().position= indicator.transform.position;
+                        //     Instantiate(bso.building);
+                        // }
                     }
                     
-                    if (wallBuilding && hit.collider.tag == "Floor" && hit.distance>=1.5f)
+                    if (bso.isWall && hit.collider.tag == "Floor" && hit.distance>=1.5f)
                     {
                         // indicator.position = new Vector3(Mathf.RoundToInt(hit.point.x / 6) * 6,
                         //     Mathf.RoundToInt(hit.point.y) >= hit.point.y
@@ -89,21 +97,69 @@ public class BuildSystem : MonoBehaviour
                                 hit.collider.transform.position.y+3,
                                 Mathf.RoundToInt(hit.point.z / 6) * 6);
                         }
+                        
                     }
                     
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        if(EnoughMaterials())
+                        {
+                            BuildObject();
+                            bso.building.GetComponent<Transform>().position= indicator.transform.position;
+                            bso.building.GetComponent<Transform>().eulerAngles = indicator.transform.eulerAngles;
+                            Instantiate(bso.building);
+                        }
+                        
+                    }
                 }
                 else
                 {
-                    indicator.gameObject.SetActive(false);
+                    temp.gameObject.SetActive(false);
                 }
             }
         }
        
     }
-
-    private bool isBuildingOn()
+    
+    public void setBSO(BuldingScriptableObject _bso)
     {
-        if (wallBuilding || floorBuilding) return true;
-        return false;
+        bso = _bso;
+        if(temp != null) Destroy(temp.gameObject);
+        
+        if (bso != null)
+        {
+            temp = Instantiate(bso.canBuildIndicator);
+            indicator = temp.transform;
+            InstantiateIndicator(EnoughMaterials());
+        }
     }
+
+    public bool EnoughMaterials()
+    {
+        for (int i = 0; i < bso.countOfMaterials.Length; i++)
+        {
+            int matCount = bso.countOfMaterials[i];
+            ItemScriptableObject iso = bso.buildingMaterials[i];
+            if (itemInventoryScript.GetItemCount(iso) < matCount) return false;
+        }
+
+        return true;
+    }
+
+    public void InstantiateIndicator(bool validBuild)
+    {
+        if (validBuild) temp.GetComponent<MeshRenderer>().material = canBuildMaterial;
+        else temp.GetComponent<MeshRenderer>().material = cannotBuildMaterial;
+    }
+
+    public void BuildObject()
+    {
+        for (int i = 0; i < bso.countOfMaterials.Length; i++)
+        {
+            int matCount = bso.countOfMaterials[i];
+            ItemScriptableObject iso = bso.buildingMaterials[i];
+            itemInventoryScript.ConsumeMultiple(iso, matCount);
+        }
+    }
+    
 }

@@ -9,8 +9,8 @@ public class ItemInventory : Inventory
 {
     private bool isOpenned = false;
     [SerializeField] private InventoryItemsHolder ItemSlotsUI;
-
-    [SerializeField] private GameObject inventoryPanel;
+    
+    [SerializeField] private GameObject inventoryPanel, buildingPanel;
     [SerializeField] private InventoryItemsHolder UIitemsHolder;
     [SerializeField] private GameObject toolHolderEmptyObject; 
     
@@ -34,6 +34,7 @@ public class ItemInventory : Inventory
             isOpenned = !isOpenned;
             if (isOpenned)
             {
+                buildingPanel.SetActive(false);
                 Cursor.lockState = CursorLockMode.Confined;
                 inventoryPanel.SetActive(true);
                 UIitemsHolder.selectItem(-1, -1);
@@ -141,21 +142,27 @@ public class ItemInventory : Inventory
     public void Consume(int consumeID)
     {
         ItemScriptableObject iso = slots[consumeID].tool;
+        
         int count = slots[consumeID].count;
         
         if (count == 1)
         {
                 
             slots[consumeID] = new ToolSlot();
+            if(equippedId!=-1)
             invManager.SetEquipped(-1);
             //selectedId = -1;
             SetSelectedID(-1);
         }
         else
         {
-            slots[selectedId] = new ToolSlot(iso, count - 1);
+            slots[consumeID] = new ToolSlot(iso, count - 1);
         }
-        UpdateInterface(selectedId);
+        
+        UpdateInterface(consumeID);
+        
+        
+        
     }
     
     
@@ -252,5 +259,40 @@ public class ItemInventory : Inventory
     public void SetSelectedID(int id)
     {
         selectedId = id;
+    }
+
+    public int GetItemCount(ItemScriptableObject iso)
+    {
+        int itemCount = 0;
+        for (int i = 0; i < inventoryCapacity; i++)
+        {
+            if(slots[i].tool == null) continue;
+            
+            if (slots[i].tool == iso)
+            {
+                itemCount += slots[i].count;
+            }
+        }
+        return itemCount;
+    }
+
+    public void ConsumeMultiple(ItemScriptableObject iso, int count)
+    {
+        int consumed = 0;
+        
+        for (int i = 0; i < inventoryCapacity; i++)
+        {
+            if (slots[i].tool == iso)
+            {
+                int limit = slots[i].count;
+                for (int k = 0; k < limit; k++)
+                {
+                    Consume(i);
+                    consumed++;
+                    if(consumed == count) return;
+                }
+            }
+        }
+        //Debug.Log("Consume Multiple");
     }
 }

@@ -153,6 +153,7 @@
      <Folder Include="Assets/TextMesh Pro/Resources/Style Sheets" />
      <Folder Include="Assets/TextMesh Pro/Fonts" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+     <Folder Include="Assets/Graphics/Sprites/UI" />
      <Folder Include="Assets/Scripts/Inventory Management" />
      <Folder Include="Assets/Graphics/Models/Consumabkes/Simple Foods" />
      <Folder Include="Assets/Scenes" />

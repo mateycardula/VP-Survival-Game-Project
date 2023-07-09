@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28012fc81e12892aeb25c9e6b23cbaa7, type: 3}
   m_Name: Floor
   m_EditorClassIdentifier: 
-  building: {fileID: 0}
-  canBuildIndicator: {fileID: 0}
-  cannotBuildIndicator: {fileID: 0}
-  buildingMaterials: []
+  building: {fileID: 418575084689015472, guid: 77141dfcacf2875d194d692a94cd93b6, type: 3}
+  canBuildIndicator: {fileID: 418575084689015472, guid: 9f5cd5c4fc3be8000a046c30c893f79b, type: 3}
+  buildingMaterials:
+  - {fileID: 11400000, guid: cb005a0e5d936a86e8e4eb5c834bb04b, type: 2}
+  countOfMaterials: 04000000
   isWall: 0
-  isFloor: 0
+  isFloor: 1

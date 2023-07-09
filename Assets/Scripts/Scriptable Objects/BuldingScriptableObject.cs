@@ -6,9 +6,9 @@ using UnityEngine;
 public class BuldingScriptableObject : ScriptableObject
 {
     // Start is called before the first frame update
-    [SerializeField] public GameObject building, canBuildIndicator, cannotBuildIndicator;
-    [SerializeField] public List<ItemScriptableObject> buildingMaterials;
+    [SerializeField] public GameObject building, canBuildIndicator;
+    [SerializeField] public ItemScriptableObject [] buildingMaterials;
+    [SerializeField] public int[] countOfMaterials;
     public bool isWall, isFloor;
-    // private ItemScriptableObject buildingMaterial;
-    // private int count;
+    
 }

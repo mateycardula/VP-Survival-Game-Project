@@ -8,10 +8,13 @@ using UnityEngine.UI;
 
 public class ToolInventory : Inventory
 {
+    private bool isOpenned = false;
     private ToolSlot prevEquipped;
     [SerializeField] private GameObject[] toolSpritesUI = new GameObject[2];
     [SerializeField] private Tool toolHolder;
-    [SerializeField] private GameObject toolHolderEmptyObject; 
+    [SerializeField] private GameObject toolHolderEmptyObject;
+
+    [SerializeField] private GameObject inventoryPanel, buildingPanel;
     
    
     // Start is called before the first frame update
@@ -31,19 +34,29 @@ public class ToolInventory : Inventory
 // Update is called once per frame
     void Update()
     {
-        // if(GetEquippedToolID() != -1)
-        // {
-        //     if (!prevEquipped.Equals(slots[GetEquippedToolID()]))
-        //     {
-        //         toolHolder.UpdateToolModel(slots[GetEquippedToolID()].tool);
-        //     }
-        //
-        //     prevEquipped = slots[GetEquippedToolID()];
-        // }
-        // else
-        // {
-        //     prevEquipped = new ToolSlot();
-        // }
+        int selectedId = GetEquippedToolID();
+        bool isBuildMode = (GetEquippedToolID()!= -1 && (slots[GetEquippedToolID()].tool as ToolScriptableObject).isBuildingTool);
+        
+        if(!isBuildMode) buildingPanel.SetActive(false);
+        
+        if (Input.GetKeyDown(KeyCode.B) && isBuildMode)
+        {
+            isOpenned = !isOpenned;
+            if (isOpenned)
+            {
+                inventoryPanel.SetActive(false);
+                Cursor.lockState = CursorLockMode.Confined;
+                buildingPanel.SetActive(true);
+                //selectedId = -1;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                buildingPanel.SetActive(false);
+            }
+        }
+        
+        
         
     }
 

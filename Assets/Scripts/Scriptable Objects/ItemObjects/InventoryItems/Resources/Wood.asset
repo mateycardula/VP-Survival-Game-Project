@@ -21,4 +21,4 @@ MonoBehaviour:
     \u0433\u0440\u0430\u0434\u0435\u045A\u0435"
   model: {fileID: 5188403426815820064, guid: c9b8f5b261036f86fafada8cf40d009e, type: 3}
   inventorySprite: {fileID: 21300000, guid: 0fdc7de55ef8b0b0ca36e962f0ea10ea, type: 3}
-  OnLeftClickAnimationClip: {fileID: 0}
+  OnLeftClickAnimationClip: {fileID: 7400000, guid: 71d0101ab62af2e05a09b8ce948c13ce, type: 2}
