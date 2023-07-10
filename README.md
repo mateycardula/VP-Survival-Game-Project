@@ -48,5 +48,58 @@ public class ConsumableScriptableObject : ItemScriptableObject //Nasleduva od It
 
 ```
 
+```csharp
+[CreateAssetMenu(menuName = "Create Item/Tool")]
+public class ToolScriptableObject : ItemScriptableObject //Nasleduva od ItemScriptableObject
+{
+    //public float attackSpeed;
+    public float damage; //Shteta koja ja nanesuvaat
+    public bool isTwoHanded; //Dali se drzi so dve race
+    public bool isBuildingTool; //Dali so alatkata moze da se gradi
+}
+```
+### Поврзување на ScriptableObject со посакуван објект
+
 За разлика од освновните _MonoBehaviour_ класи, класите кои наследуваат од _ScriptableObject_ **не можат** да бидат директна компонента на некој објект. Поради ова треба да се најде начин истите да се поврзат со посакуваниот тип или објект. Наше решение на овој проблем беше една „меѓукласа“ (MonoBehaviour) која е компонента на секој објект од даден тип и  чија единствена цел е да чува некој конкретен _ScriptableObject_.
 
+Конкретно, секој објект за кој ни се потребни податоците од _ItemScriptableObject_ класата, има компонента класа _ISOHolder_ (ItemScriptableObjectHolder)
+
+```csharp
+public class ISOHolder : MonoBehaviour
+{
+    public ItemScriptableObject iso;
+}
+```
+Ова е еден од начините на кои го направивме поврзувањето. За разлика од _ItemScriptableObject_, во нашата игра има и _DestroyableScriptableObjects_ (објекти кои се уништуваат и за тоа даваат некаква награда, пр. дрвата), поради тоа што за истите беше потребна посебна _Destroyable_ класа со поширока логика, променливата од типот _DestroyableScriptableObject_ се чува во неа:
+
+```csharp
+[CreateAssetMenu(menuName = "Destroyable Object")]
+public class DestroyableScriptableObject : ScriptableObject
+{
+    public float health; 
+    public GameObject brokenObject; //objekt koj treba da se instancira koja health<=0
+    public List<ToolScriptableObject> WeaknessList; //Dokolku alatkata so koja se udira po objektot e vo weakness listata togas health-=tool.damage*2
+    public List<ToolScriptableObject> StrenghtList; //Dokolku e vo strenght health-=tool.damage*2 
+    public GameObject [] itemsToDrop; //Objekti koi gi frla kako nagradi (moze samo eden tip, no moze i povekje), se frlaat itemToDropCount objekti po slucaen izbor od listata 
+    public int itemToDropCount;
+}
+```
+Типот _DestroyableScriptableObject_ се чува и при инстанцирање на _Destroyable_ објект се вчитува health промелнивата за објектот кој се инстанцира.
+
+```csharp
+public class Destroyable : MonoBehaviour
+{
+    public float health;
+    public DestroyableScriptableObject dso;
+    void Start()
+    {
+        health = dso.health;
+    }
+.
+.
+.
+}
+```
+На овој начин лесно може да се создаде кутија (чии податоци се чуваат во DestroyableScriptableObject) со health = 30 или дрво со health = 100, па дури и некое животно кое би читало податоци од _ScriptableObject_ класа која би наследувала од _DestroyableScriptableObject_.
+
+### Пример инстанцирање на ConsumableScriptableObject
