@@ -3,6 +3,7 @@
 ## Содржина
 * [Општо](#општо)
 * [Design pattern](#design-pattern)
+* [Inventory System](#inventory-system)
 
 ## Општо
 FPS Survival игра направена во [Unity Game Engine](https://unity.com/) создадена за целите на проектот од предметот Визуелно Програмирање на [ФИНКИ](https://www.finki.ukim.mk/mk). 
@@ -103,3 +104,9 @@ public class Destroyable : MonoBehaviour
 На овој начин лесно може да се создаде кутија (чии податоци се чуваат во DestroyableScriptableObject) со health = 30 или дрво со health = 100, па дури и некое животно кое би читало податоци од _ScriptableObject_ класа која би наследувала од _DestroyableScriptableObject_.
 
 ### Пример инстанцирање на ConsumableScriptableObject
+
+https://github.com/mateycardula/VP-Survival-Game-Project/assets/137711431/c13e4ab9-49f7-40a6-9c1b-e3e4e72a3ecd
+
+## Inventory System
+_Inventory_ системот главно е поделен на два дела. Првиот дел се двата слота кои што чуваат алатки (_ToolScriptableObject_) и дваесет слотови кои што ги чуваат останатите _ItemScriptableObjects_ (ова _inventory_ се отвора на _TAB_)
+
