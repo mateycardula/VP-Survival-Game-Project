@@ -313,6 +313,61 @@ public class BuldingScriptableObject : ScriptableObject
 
 За да се отклучи можноста за градење потребно е играчот во рака да држи _ToolScriptableObject_, чија што bool isBuildingTool; променлива е _true_. Моменталната верзија на играта како таков _building tool_ вклучува чекан. 
 
+```csharp
+[SerializeField] private BuldingScriptableObject bso;
+.
+.
+if(bso != null){
+  .
+  .
+  if (Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        if(EnoughMaterials()) //dokolku ima dovolno materijali za gradenje na objektot
+                        {
+                            BuildObject(); //objektot se gradi
+                        }
+                    }
+}
+```
+
+```csharp
+public void BuildObject()
+    {
+        for (int i = 0; i < bso.countOfMaterials.Length; i++)
+        {
+            int matCount = bso.countOfMaterials[i];
+            ItemScriptableObject iso = bso.buildingMaterials[i];
+            itemInventoryScript.ConsumeMultiple(iso, matCount);
+        }
+        bso.building.GetComponent<Transform>().position= indicator.transform.position;
+        bso.building.GetComponent<Transform>().eulerAngles = indicator.transform.eulerAngles;
+        Instantiate(bso.building);
+    }
+```
+Овој метод во зависност од тоа колку вкупно **различни** материјали се потребни за градење на еден објекt толку пати од претходно опишаната _ItemInventory_, се повикува _ConsumeMultiple()_ методот.
+
+```csharp
+ public void ConsumeMultiple(ItemScriptableObject iso, int count)
+    {
+        int consumed = 0; //brojac za da ne se nadmine potrebniot broj na materijali
+        
+        for (int i = 0; i < inventoryCapacity; i++) //se iterira niz sekoj slot na inventory
+        {
+            if (slots[i].tool == iso) //koga kje najde slot koj go cuva potrebniot objekt
+            {
+                int limit = slots[i].count;
+                for (int k = 0; k < limit; k++)
+                {
+                    Consume(i); //za negovoto id povikuva consume(), metodot koj se povikuva pri jadenje na hrana
+                    consumed++;
+                    if(consumed == count) return;
+                }
+            }
+        }
+        //Debug.Log("Consume Multiple");
+    }
+```
+### Користење на материјали при градење
 
 
 
