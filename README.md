@@ -111,7 +111,7 @@ public class Destroyable : MonoBehaviour
 https://github.com/mateycardula/VP-Survival-Game-Project/assets/137711431/c13e4ab9-49f7-40a6-9c1b-e3e4e72a3ecd
 
 ## Inventory System
-_Inventory_ системот главно е поделен на два дела. Првиот дел се двата слота кои што чуваат алатки (_ToolScriptableObject_) и дваесет слотови кои што ги чуваат останатите _ItemScriptableObjects_ (ова _inventory_ се отвора на _TAB_).
+_Inventory_ системот главно е поделен на два дела. Првиот дел се двата слота коишто чуваат алатки (_ToolScriptableObject_) и дваесет слотови коишто ги чуваат останатите _ItemScriptableObjects_ (ова _inventory_ се отвора на _TAB_).
 
 Нашето решение за овој систем беше полиморфизам преку кој ги добиваме двата посебни системи за чување на објекти. 
 
@@ -192,7 +192,7 @@ public override ItemScriptableObject CollectItem(ItemScriptableObject iso)
 
 Методите на _inventory_ системите се повикуваат преку друга класа која што содржи метод кој служи за пуштање на [raycast](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) од координатниот почеток на камерата во права насока. 
 
-Кога зракот има контакт со објект означен како _"Item"_ се активира [_Halo_](https://docs.unity3d.com/Manual/class-Halo.html) компонентата на објектот (жолтата светлина што индицира дека може да се собере објектот во кој што гледаме). Доколку се притисне _E_, се повикува COllectItem() од ToolInventory или ItemInventory соодветно. 
+Кога зракот има контакт со објект означен како _"Item"_ се активира [_Halo_](https://docs.unity3d.com/Manual/class-Halo.html) компонентата на објектот (жолтата светлина што индицира дека може да се собере објектот во кој што гледаме). Доколку се притисне _E_, се повикува CollectItem() од ToolInventory или ItemInventory соодветно. 
 
 ```csharp
 private ToolInventory toolInventoryManager;
@@ -311,7 +311,7 @@ public class BuldingScriptableObject : ScriptableObject
     [SerializeField] public ItemScriptableObject [] buildingMaterials;
     [SerializeField] public int[] countOfMaterials; 
 ```
-Ни овозможуваат за секој објект кој се гради да се потребни повеќе видови на материјали (_ItemScriptableObjects_) во различни количини, при што индекс 0 од низата со материјали соодветствува со потребниот прој од низата со целобројни променливи. 
+Ни овозможуваат за секој објект кој се гради да се потребни повеќе видови на материјали (_ItemScriptableObjects_) во различни количини, при што индекс 0 од низата со материјали соодветствува со потребниот број од низата со целобројни променливи. 
 
 За да се отклучи можноста за градење потребно е играчот во рака да држи _ToolScriptableObject_, чија што bool isBuildingTool; променлива е _true_. Моменталната верзија на играта како таков _building tool_ вклучува чекан. 
 
@@ -346,7 +346,7 @@ public void BuildObject()
         Instantiate(bso.building);
     }
 ```
-Овој метод во зависност од тоа колку вкупно **различни** материјали се потребни за градење на еден објекt толку пати од претходно опишаната _ItemInventory_, се повикува _ConsumeMultiple()_ методот.
+Овој метод, во зависност од бројот на **различни** материјали потребни за градење на еден објекt, толку пати го повикува _ConsumeMultiple()_ методот од претходно опишаната _ItemInventory_ класа. Всушност, за секој различен материјал _ConsumeMultiple()_ се повикува по еднаш (со агрументи од тип ItemScriptableObject и цел број кој го назначува бројот на инстанци од материјалот кои треба да се искористат).
 
 ```csharp
  public void ConsumeMultiple(ItemScriptableObject iso, int count)
@@ -375,7 +375,7 @@ public void BuildObject()
 https://github.com/mateycardula/VP-Survival-Game-Project/assets/137711431/d8b7d0a3-132b-4435-8391-36bbe11dae27
 
 ## Заклучок
-Развивајќи ја играта се водевме по TypeObject design pattern преку _ScriptableObjects_ во _Unity_. Ова ни овозможи да создадеме игра со висока скалабилност, па во моменталната верзија би можеле да додадеме уште десетици објекти кои се кршат, нови _ItemScriptableObjects_ кои би се добивале преку кршењето. Исто така можат да се додаваат и нови _ToolScriptableObjects_ чија ефикасност би варирала во зависност од објектот во кој што се удира. Од системот за градење, специфично искористувањето на повеќе видови на материјали во различен број за изградба на еден објект лесно може да се пренамени за создавање на солиден _crafting system_. 
+Развивајќи ја играта се водевме по TypeObject design pattern преку _ScriptableObjects_ во _Unity_. Ова ни овозможи да создадеме игра со висока скалабилност, па во моменталната верзија би можеле да додадеме уште десетици објекти кои се кршат, нови _ItemScriptableObjects_ кои би се добивале преку кршењето. Исто така можат да се додаваат и нови _ToolScriptableObjects_ чија ефикасност би варирала во зависност од објектот во којшто се удира. Од системот за градење, специфично искористувањето на повеќе видови на материјали во различен број за изградба на еден објект, лесно може да се пренамени за создавање на солиден _crafting system_. 
 
 
 
