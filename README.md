@@ -4,6 +4,7 @@
 * [Општо](#општо)
 * [Design pattern](#design-pattern)
 * [Inventory System](#inventory-system)
+* [Destroyable Objects](#destroyable-objects)
 
 ## Општо
 FPS Survival игра направена во [Unity Game Engine](https://unity.com/) создадена за целите на проектот од предметот Визуелно Програмирање на [ФИНКИ](https://www.finki.ukim.mk/mk). 
@@ -283,3 +284,7 @@ public void DropLoot()
         Destroy(gameObject); //od scenata celosno se unistuva objektot za da ne zafakja memorija i resursi
     }
 ```
+### Инстанцирање на јаболкница
+
+https://github.com/mateycardula/VP-Survival-Game-Project/assets/137711431/b402d036-279f-4a11-84a5-0a09ccd0f820
+
