@@ -218,6 +218,68 @@ if (hit.collider.CompareTag("Item"))
 ```
 
 ## Destroyable Objects
+Како што претходно кажавме, покрај _ItemScriptableObjects_, во нашата игра постојат и _DestroyableScriptableObjects_. Слично како и кај другите _ScriptableObjects_, податоците за овие ги чуваме во класата на конкретниот тип, т.е _Destroyable_.
 
+```csharp
+public class DestroyableScriptableObject : ScriptableObject
+{
+    public float health; 
+    public GameObject brokenObject; //objekt koj treba da se instancira koja health<=0
+    public List<ToolScriptableObject> WeaknessList; //Dokolku alatkata so koja se udira po objektot e vo weakness listata togas health-=tool.damage*2
+    public List<ToolScriptableObject> StrenghtList; //Dokolku e vo strenght health-=tool.damage*2 
+    public GameObject [] itemsToDrop; //Objekti koi gi frla kako nagradi (moze samo eden tip, no moze i povekje), se frlaat itemToDropCount objekti po slucaen izbor od listata 
+    public int itemToDropCount;
+}
+```
+Се поврзува со:
 
+```csharp
+public class Destroyable : MonoBehaviour
+{
+    public float health;
+    public DestroyableScriptableObject dso;
+    void Start()
+    {
+        health = dso.health; //pri instanciranje na objektot
+    }
+    public void SetHealth(float h, ToolScriptableObject tso = null);
+    public void DropLoot();
+    private void SpawnBrokenObject(Vector3 position);
+}
+```
+Секојпат кога се нанесува штета врз објектот се повикува SetHealth(), функцијата, а во моментот кога health<=0, играчот ја добива наградата.
 
+```csharp
+public void SetHealth(float h, ToolScriptableObject tso = null)
+    {
+        if(tso!=null)
+        {
+            if (dso.WeaknessList.Contains(tso)) h *= 2; //Dokolku objektot e slab na itemot koj go udira (pr. drvo na sekira)
+            if (dso.StrenghtList.Contains(tso)) h /= 3; 
+        }
+        health += h;
+        if(health<=0) DropLoot();
+    }
+```
+
+Убавината на DropLoot() функцијата е тоа што секој објект може да дава различни видови на награди по случаен избор. Тоа е така, поради тоа што самиот ScriptableObject содржи низа на објекти кои можат да се паднат како награда, а потоа за itemToDropCount итерации, избира случаен објект од листата кој се инстанцира на сцената.
+
+```csharp
+public void DropLoot()
+    {
+        Vector3 position = gameObject.transform.position;
+        gameObject.SetActive(false); //najprvo se deaktivira objektot
+        //dokolku namesto SetActive, na pocetokot napravime Destroy(gameObject) so toa bi prkeinala i funkcijata poradi toa sto e komponenta na toj objekt.
+        
+        GameObject [] lootItems = new GameObject[dso.itemToDropCount];
+
+        for (int i = 0; i < dso.itemToDropCount; i++)
+        {
+            lootItems[i] = dso.itemsToDrop[Random.Range(0, dso.itemsToDrop.Length)]; //se izbira slucen item 
+            lootItems[i].transform.position = transform.position + Vector3.up * Random.Range(2, 3); //se instancira vo pozicija nad koordinatniot pocetok od objektot koj se krsi
+            Instantiate(lootItems[i]);
+        }
+        SpawnBrokenObject(position); //se mesti skrsen objekt
+        Destroy(gameObject); //od scenata celosno se unistuva objektot za da ne zafakja memorija i resursi
+    }
+```
