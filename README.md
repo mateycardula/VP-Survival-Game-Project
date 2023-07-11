@@ -285,6 +285,37 @@ public void DropLoot()
     }
 ```
 ### Инстанцирање на јаболкница
+Инстанцирање на објект јаболкница, со што во низата на објекти кои дрвото ги дава како награда, втор објект е јаболкото кое го инстанциравме во претходниот пример. 
 
 https://github.com/mateycardula/VP-Survival-Game-Project/assets/137711431/b402d036-279f-4a11-84a5-0a09ccd0f820
+
+
+## Building System
+
+Системот за градење исто така се заснова на _ScriptableObjects_.
+
+```csharp
+public class BuldingScriptableObject : ScriptableObject
+{
+    [SerializeField] public GameObject building, canBuildIndicator; //dva objekti, edniot e onoj koj go prati kursorot, drugiot e onoj koj se postavuva na negovoto mesto
+    [SerializeField] public ItemScriptableObject [] buildingMaterials;
+    [SerializeField] public int[] countOfMaterials; 
+    public bool isWall, isFloor; //dali objektot e horizontalno ili vertikalno orientiran   
+}
+```
+Двете низи: 
+
+```csharp
+    [SerializeField] public ItemScriptableObject [] buildingMaterials;
+    [SerializeField] public int[] countOfMaterials; 
+```
+Ни овозможуваат за секој објект кој се гради да се потребни повеќе видови на материјали (_ItemScriptableObjects_) во различни количини, при што индекс 0 од низата со материјали соодветствува со потребниот прој од низата со целобројни променливи. 
+
+За да се отклучи можноста за градење потребно е играчот во рака да држи _ToolScriptableObject_, чија што bool isBuildingTool; променлива е _true_. Моменталната верзија на играта како таков _building tool_ вклучува чекан. 
+
+
+
+
+
+
 
