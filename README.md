@@ -108,5 +108,179 @@ public class Destroyable : MonoBehaviour
 https://github.com/mateycardula/VP-Survival-Game-Project/assets/137711431/c13e4ab9-49f7-40a6-9c1b-e3e4e72a3ecd
 
 ## Inventory System
-_Inventory_ системот главно е поделен на два дела. Првиот дел се двата слота кои што чуваат алатки (_ToolScriptableObject_) и дваесет слотови кои што ги чуваат останатите _ItemScriptableObjects_ (ова _inventory_ се отвора на _TAB_)
+_Inventory_ системот главно е поделен на два дела. Првиот дел се двата слота кои што чуваат алатки (_ToolScriptableObject_) и дваесет слотови кои што ги чуваат останатите _ItemScriptableObjects_ (ова _inventory_ се отвора на _TAB_).
+
+Нашето решение за овој систем беше полиморфизам преку кој ги добиваме двата посебни системи за чување на објекти. 
+
+```csharp
+public abstract class  Inventory : MonoBehaviour
+{
+    [SerializeField] public Slot[] slots; //Klasa vo koja cuvame podatoci za sekoj slot
+    public int inventoryCapacity, itemCount; //maksimum golemina na inv, i broj na items vo inventory
+
+    public abstract ItemScriptableObject CollectItem(ItemScriptableObject iso);
+    public abstract ItemScriptableObject DropItem(int itemSlotID, bool shouldConsume = false);
+    protected abstract void UpdateInterface(int id =-1);
+}
+```
+Во двата типови на _inventory_ секое поле е објект од тип Slot:
+
+```csharp
+[SerializeField] public Slot[] slots; //Klasa vo koja cuvame podatoci za sekoj slot
+```
+```csharp
+public class Slot
+{
+    public bool isEquipped; 
+    public ItemScriptableObject tool; //ItemScriptableObject koj go cuvame vo poleto
+    public int count; //Broj od objektot vo edno pole od inventory-to
+    public Slot(ItemScriptableObject _tool, int _count = 1, bool _isEquipped = false)
+    {
+        isEquipped = _isEquipped;
+        tool = _tool;
+        count = _count;
+    }
+
+    public Slot() //Go koristime Inventory System
+Inventory системот главно е поделен на два дела. Првиот дел се двата слота кои што чуваат алатки (ToolScriptableObject) и дваесет слотови кои што ги чуваат останатите ItemScriptableObjects (ова inventory се отвора на TAB).
+
+Нашето решение за овој систем беше полиморфизам преку кој ги добиваме двата посебни системи за чување на објекти.
+
+public abstract class  Inventory : MonoBehaviour
+{
+    [SerializeField] public Slot[] slots; //Klasa vo koja cuvame podatoci za sekoj slot
+    public int inventoryCapacity, itemCount; //maksimum golemina na inv, i broj na items vo inventory
+
+    public abstract ItemScriptableObject CollectItem(ItemScriptableObject iso);
+    public abstract ItemScriptableObject DropItem(int itemSlotID, bool shouldConsume = false);
+    protected abstract void UpdateInterface(int id =-1);
+}
+Во двата типови на inventory секое поле е објект од тип Slot:
+
+[SerializeField] public Slot[] slots; //Klasa vo koja cuvame podatoci za sekoj slot
+public class Slot
+{
+    public bool isEquipped; 
+    public ItemScriptableObject tool; //ItemScriptableObject koj go cuvame vo poleto
+    public int count; //Broj od objektot vo edno pole od inventory-to
+    public Slot(ItemScriptableObject _tool, int _count = 1, bool _isEquipped = false)
+    {
+        isEquipped = _isEquipped;
+        tool = _tool;
+        count = _count;
+    }
+
+    public Slot() //Go koristime za instanciranje na prazno pole (pr. posle drop ili consume koga momentalniot count e 1)
+    {
+        isEquipped = false;
+        tool = null;
+        count = 0;
+    }
+}
+Како изгледа Collect() методот кај ItemInventory?
+public override ItemScriptableObject CollectItem(ItemScriptableObject iso)
+    {
+       int id = FindFirstNonFullISOslot(iso); //go barame prviot slot od itemot koj sakame da se equip-ne, a da ne e negoviot count = stack
+        bool collected = false;
+        if (id == -1) //Dokolku ne sme nasle slot koj ne go dostignal ogranicuvanjeto, itemot se mesti na prvoto slobodno mesto
+        {
+            for (int i = 0; i < inventoryCapacity; i++)
+            {
+                if (slots[i].tool == null)
+                {
+                    slots[i] = new Slot(iso);
+                    UpdateInterface(i);
+                    collected = true;
+                    break;
+                }
+            }
+            if (!collected)
+            {
+                //TODO: Announce full inventory
+            }
+         }
+        else //Dokolku sme nasle 
+        {
+            int count = slots[id].count;
+            slots[id] = new Slot(iso,count+1); //Na mestoto od stariot slot cuvame nov objekt so count++
+            UpdateInterface(id);
+        }
+        return iso;
+    }
+za instanciranje na prazno pole (pr. posle drop ili consume koga momentalniot count e 1)
+    {
+        isEquipped = false;
+        tool = null;
+        count = 0;
+    }
+}
+```
+### Како изгледа Collect() методот кај ItemInventory?
+
+```csharp
+public override ItemScriptableObject CollectItem(ItemScriptableObject iso)
+    {
+       int id = FindFirstNonFullISOslot(iso); //go barame prviot slot od itemot koj sakame da se equip-ne, a da ne e negoviot count = stack
+        bool collected = false;
+        if (id == -1) //Dokolku ne sme nasle slot koj ne go dostignal ogranicuvanjeto, itemot se mesti na prvoto slobodno mesto
+        {
+            for (int i = 0; i < inventoryCapacity; i++)
+            {
+                if (slots[i].tool == null)
+                {
+                    slots[i] = new Slot(iso);
+                    UpdateInterface(i);
+                    collected = true;
+                    break;
+                }
+            }
+            if (!collected)
+            {
+                //TODO: Announce full inventory
+            }
+         }
+        else //Dokolku sme nasle 
+        {
+            int count = slots[id].count;
+            slots[id] = new Slot(iso,count+1); //Na mestoto od stariot slot cuvame nov objekt so count++
+            UpdateInterface(id);
+        }
+        return iso;
+    }
+```
+#### Од каде се повикува Collect()?
+
+Методите на _inventory_ системите се повикуваат преку друга класа која што содржи метод кој служи за пуштање на [raycast](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) од координатниот почеток на камерата во права насока. 
+
+Кога зракот има контакт со објект означен како _"Item"_ се активира [_Halo_](https://docs.unity3d.com/Manual/class-Halo.html) компонентата на објектот (жолтата светлина што индицира дека може да се собере објектот во кој што гледаме). Доколку се притисне _E_, се повикува COllectItem() од ToolInventory или ItemInventory соодветно. 
+
+```csharp
+private ToolInventory toolInventoryManager;
+private ItemInventory itemInventoryManager;
+.
+.
+if (hit.collider.CompareTag("Item"))
+            {
+                .
+                .
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    ItemScriptableObject hitItemISO = hitItem.GetComponent<ISOHolder>().iso; //od megjuklasata go zemame iso podatokot
+                    if (hitItemISO is ToolScriptableObject)  //Dokolku e tool se povikuva collect na ToolInventory
+                    {
+                        toolInventoryManager.CollectItem(hitItemISO);
+                        GameObject.Destroy(hitItem);
+                    }
+                    else //Inaku se povikuva Collect na ItemInventory
+                    {
+                        itemInventoryManager.CollectItem(hitItemISO);
+                        GameObject.Destroy(hitItem);
+                    }
+                }
+            }
+```
+
+## Destroyable Objects
+
+
 
