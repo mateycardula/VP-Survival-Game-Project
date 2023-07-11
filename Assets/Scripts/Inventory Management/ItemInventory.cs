@@ -51,11 +51,9 @@ public class ItemInventory : Inventory
 
     public override ItemScriptableObject CollectItem(ItemScriptableObject iso)
     {
-        Debug.Log(iso.name);
-        //int id = FindFirstNonFullISOslot(iso as ResourceScriptableObject);
-        int id = FindFirstNonFullISOslot(iso);
+       int id = FindFirstNonFullISOslot(iso); //go barame prviot slot od itemot koj sakame da se equip-ne, a da ne e negoviot count = stack
         bool collected = false;
-        if (id == -1)
+        if (id == -1) //Dokolku ne sme nasle slot koj ne go dostignal ogranicuvanjeto, itemot se mesti na prvoto slobodno mesto
         {
             for (int i = 0; i < inventoryCapacity; i++)
             {
@@ -67,17 +65,15 @@ public class ItemInventory : Inventory
                     break;
                 }
             }
-
             if (!collected)
             {
                 //TODO: Announce full inventory
             }
          }
-        else
+        else //Dokolku sme nasle 
         {
             int count = slots[id].count;
-            // Debug.Log(count);
-            slots[id] = new ToolSlot(iso,count+1);
+            slots[id] = new ToolSlot(iso,count+1); //Na mestoto od stariot slot cuvame nov objekt so count++
             UpdateInterface(id);
         }
         return iso;
@@ -128,6 +124,7 @@ public class ItemInventory : Inventory
                 {
                     invManager.SetEquipped(-1);
                 }
+                UIitemsHolder.selectItem(-1, -1);
                 //selectedId = -1;
                 SetSelectedID(-1);
             }
@@ -278,16 +275,16 @@ public class ItemInventory : Inventory
 
     public void ConsumeMultiple(ItemScriptableObject iso, int count)
     {
-        int consumed = 0;
+        int consumed = 0; //brojac za da ne se nadmine potrebniot broj na materijali
         
-        for (int i = 0; i < inventoryCapacity; i++)
+        for (int i = 0; i < inventoryCapacity; i++) //se iterira niz sekoj slot na inventory
         {
-            if (slots[i].tool == iso)
+            if (slots[i].tool == iso) //koga kje najde slot koj go cuva potrebniot objekt
             {
                 int limit = slots[i].count;
                 for (int k = 0; k < limit; k++)
                 {
-                    Consume(i);
+                    Consume(i); //za negovoto id povikuva consume(), metodot koj se povikuva pri jadenje na hrana
                     consumed++;
                     if(consumed == count) return;
                 }

@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 public class TreeSpawner : MonoBehaviour
 {
     
-    [SerializeField] private GameObject[] trees = new GameObject[4];
+    [SerializeField] private GameObject[] trees;
     public int treeCount;
     private GameObject [] treesArray; 
     private void Awake()
@@ -16,8 +16,8 @@ public class TreeSpawner : MonoBehaviour
         treesArray = new GameObject[treeCount];
         for (int i = 0; i < treeCount; i++)
         {
-            treesArray[i] = Instantiate(trees[Random.Range(0, 4)]);
-            treesArray[i].transform.position = new Vector3(Random.Range(30, 970), 70, Random.Range(30, 970));
+            treesArray[i] = Instantiate(trees[Random.Range(0, trees.Length)]);
+            treesArray[i].transform.position = new Vector3(Random.Range(80, 920), 40, Random.Range(80, 920));
         }
     }
 

@@ -16,6 +16,7 @@ MonoBehaviour:
   canBuildIndicator: {fileID: 418575084689015472, guid: 9f5cd5c4fc3be8000a046c30c893f79b, type: 3}
   buildingMaterials:
   - {fileID: 11400000, guid: cb005a0e5d936a86e8e4eb5c834bb04b, type: 2}
-  countOfMaterials: 04000000
+  - {fileID: 11400000, guid: 0a07337dadb99ecad8532702d4753a11, type: 2}
+  countOfMaterials: 0400000002000000
   isWall: 0
   isFloor: 1

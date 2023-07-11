@@ -6,10 +6,9 @@ using UnityEngine;
 [System.Serializable]
 public class ToolSlot
 {
-    [SerializeField] private Tool toolHolder; 
-    public bool isEquipped;
-    public ItemScriptableObject tool;
-    public int count;
+    public bool isEquipped; 
+    public ItemScriptableObject tool; //ItemScriptableObject koj go cuvame vo poleto
+    public int count; //Broj od objektot vo edno pole od inventory-to
     public ToolSlot(ItemScriptableObject _tool, int _count = 1, bool _isEquipped = false)
     {
         
@@ -18,7 +17,7 @@ public class ToolSlot
         count = _count;
     }
 
-    public ToolSlot()
+    public ToolSlot() //Go koristime za instanciranje na prazno pole (pr. posle drop ili consume)
     {
         isEquipped = false;
         tool = null;

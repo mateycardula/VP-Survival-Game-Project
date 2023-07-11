@@ -33,34 +33,32 @@ public class BuildSystem : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out hit, 10f))
             {
                 
-                if ((hit.collider.tag == "Ground" || hit.collider.tag == "Floor"))
+                if ((hit.collider.tag == "Ground" || hit.collider.tag == "Floor" || hit.collider.tag == "Wall"))
                 {
                     temp.gameObject.SetActive(true);
                     Debug.Log(indicator.position.ToString());
                    // temp.gameObject.SetActive(true);
                    
-                    if(bso.isFloor && hit.collider.tag == "Ground" && hit.distance>4.0f)
+                    if(bso.isFloor && (hit.collider.tag == "Ground" || hit.collider.tag == "Wall")   && hit.distance>4.0f)
                     {
-                        indicator.position = new Vector3(Mathf.RoundToInt(hit.point.x / 6) * 6,
-                            Mathf.RoundToInt(hit.point.y) >= hit.point.y
-                                ? Mathf.RoundToInt(hit.point.y/6)*6
-                                : Mathf.RoundToInt(hit.point.y/6)*6,
-                            Mathf.RoundToInt(hit.point.z / 6) * 6);
-                        // if (Input.GetKeyDown(KeyCode.Mouse0))
-                        // {
-                        //     bso.building.GetComponent<Transform>().position= indicator.transform.position;
-                        //     Instantiate(bso.building);
-                        // }
+                        if(hit.collider.tag == "Ground")
+                        {
+                            indicator.position = new Vector3(Mathf.RoundToInt(hit.point.x / 6) * 6,
+                                Mathf.RoundToInt(hit.point.y / 6) * 6,
+                                Mathf.RoundToInt(hit.point.z / 6) * 6);
+                        }
+
+                        if (hit.collider.tag == "Wall")
+                        {
+                            indicator.position = new Vector3(Mathf.RoundToInt(hit.point.x / 6) * 6,
+                                hit.collider.transform.position.y+3,
+                                Mathf.RoundToInt(hit.point.z / 6) * 6);
+                        }
+                        
                     }
                     
                     if (bso.isWall && hit.collider.tag == "Floor" && hit.distance>=1.5f)
                     {
-                        // indicator.position = new Vector3(Mathf.RoundToInt(hit.point.x / 6) * 6,
-                        //     Mathf.RoundToInt(hit.point.y) >= hit.point.y
-                        //         ? Mathf.RoundToInt(hit.point.y/6)*6
-                        //         : Mathf.RoundToInt(hit.point.y/6)*6,
-                        //     Mathf.RoundToInt(hit.point.z / 6) * 6);
-                        
                         float modRotation = player.transform.eulerAngles.y % 360;
                         if (modRotation > 0.0f && modRotation <= 90.0f)
                         {

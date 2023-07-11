@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerVitality : MonoBehaviour
 {
-    private float time = 3;
-    private float timer = 3;
+    private float time = 10;
+    private float timer = 10;
     public float hunger = 100;
 
     [SerializeField] private UIVitality ui_vitals;
@@ -21,7 +21,7 @@ public class PlayerVitality : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-            setHunger(-5, -2);
+            setHunger(-3, -2);
             timer = time;
         }
     }

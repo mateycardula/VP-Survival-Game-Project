@@ -38,60 +38,23 @@ public class Attack : MonoBehaviour
             timer = time;
         }
     }
-
-    private void DropLoot(Collider collider, Destroyable destroyableData)
-    {
-        GameObject [] lootItems = new GameObject[destroyableData.dso.itemToDropCount];
-        for (int i = 0; i < destroyableData.dso.itemToDropCount; i++)
-        {
-            lootItems[i] = destroyableData.dso.itemToDrop;
-            lootItems[i].transform.position = collider.transform.position + Vector3.up * Random.Range(2, 3);
-            Instantiate(lootItems[i]);
-            
-           
-        }
-    }
     IEnumerator HitDestroyableObject()
     {
         Debug.Log("Ej");
         collider = checkCollider.collision();
-        //Proverka dali e napad
         changed = false;
+        
+        //Proverka dali e napad
         if(attackingTool.toolItem is ToolScriptableObject)
         {
             if (collider.tag == "Destroyable")
             {
                 float damage = (attackingTool.toolItem as ToolScriptableObject).damage;
                 Destroyable destroyableData = collider.GetComponent<Destroyable>();
-
-                if (destroyableData.dso.WeaknessList.Contains(attackingTool.toolItem as ToolScriptableObject))
-                    damage *= 2.0f;
-                
-                // if (destroyableData.dso.WeaknessList.Contains(attackingTool.toolItem as ToolScriptableObject))
-                // {
-                //     yield return new WaitForSeconds(attackingTool.toolItem.OnLeftClickAnimationClip.length);
-                //     if (changed) yield break;
-                //     destroyableData.health -= (attackingTool.toolItem as ToolScriptableObject).damage * 2;
-                // }
                 
                 yield return new WaitForSeconds(attackingTool.toolItem.OnLeftClickAnimationClip.length);
                 if (changed) yield break;
-                destroyableData.health -= (attackingTool.toolItem as ToolScriptableObject).damage * 2;
-
-                if (destroyableData.health <= 0)
-                {
-                    Vector3 treePos = collider.transform.position;
-                    Collider colliderCP = collider;
-                    //StartCoroutine(waitEnumerator(colliderCP, destroyableData, 3, destroyableData.dso.itemToDrop));
-                    DropLoot(collider, destroyableData);
-                    Destroy(collider.gameObject);
-                    if (destroyableData.dso.brokenObject != null)
-                    {
-                        GameObject brokenObjectToSpawn;
-                        brokenObjectToSpawn = Instantiate(destroyableData.dso.brokenObject);
-                        brokenObjectToSpawn.transform.position = treePos;
-                    }
-                }
+                destroyableData.SetHealth(-damage, attackingTool.toolItem as ToolScriptableObject);
             }
         }
 

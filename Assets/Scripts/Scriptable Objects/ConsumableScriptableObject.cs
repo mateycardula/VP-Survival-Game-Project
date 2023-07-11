@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(menuName = "Create Item/Consumable")]
-public class ConsumableScriptableObject : ItemScriptableObject
+public class ConsumableScriptableObject : ItemScriptableObject //Nasleduva od ItemScriptableObject
 {
-    // Start is called before the first frame update
-    public float hungerChange;
-    public float thirstChange;
+    public float hungerChange; //Promena na glad
+    public float thirstChange; //Promena na zhed
 }

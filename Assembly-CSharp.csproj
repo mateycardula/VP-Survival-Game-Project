@@ -127,12 +127,12 @@
      <Folder Include="Assets/Graphics/Sprites/Inventory" />
      <Folder Include="Assets/Animations/LeftClickAnimations" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
-     <Folder Include="Assets/Graphics/Models/Consumabkes" />
+     <Folder Include="Assets/Graphics/Models/Consumables" />
      <Folder Include="Assets/Sketchfab Axe" />
      <Folder Include="Assets/TextMesh Pro" />
      <Folder Include="Assets/Graphics/Models/Resources/Wood" />
      <Folder Include="Assets/Scripts/Scriptable Objects/ItemObjects/ToolObjects" />
-     <Folder Include="Assets/Graphics/Models/Consumabkes/Simple Foods/Mesh Form" />
+     <Folder Include="Assets/Graphics/Models/Consumables/Simple Foods/Mesh Form" />
      <Folder Include="Assets/Graphics/Models/Tools/Polygon-Lite Survival Collection/Prefabs" />
      <Folder Include="Assets/Tree1-Broken_Textures" />
      <Folder Include="Assets/Sketchfab For Unity/Scripts/AssetBrowser" />
@@ -144,7 +144,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Assets/Tree0-Broken_Textures" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
-     <Folder Include="Assets/Graphics/Models/Consumabkes/Simple Foods/Prefab Form" />
+     <Folder Include="Assets/Graphics/Models/Consumables/Simple Foods/Prefab Form" />
      <Folder Include="Assets/Materials" />
      <Folder Include="Assets/Scripts/UI" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
@@ -155,7 +155,7 @@
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <Folder Include="Assets/Graphics/Sprites/UI" />
      <Folder Include="Assets/Scripts/Inventory Management" />
-     <Folder Include="Assets/Graphics/Models/Consumabkes/Simple Foods" />
+     <Folder Include="Assets/Graphics/Models/Consumables/Simple Foods" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/Scripts/Scriptable Objects/DestroyableObjects" />
      <Folder Include="Assets/Graphics/Models/Tools" />

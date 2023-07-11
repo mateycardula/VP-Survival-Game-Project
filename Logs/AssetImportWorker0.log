@@ -24,7 +24,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-39773
+35919
 Successfully changed project path to: /home/mateycardula/Dev/Unity/Projects/Survival-Game
 /home/mateycardula/Dev/Unity/Projects/Survival-Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -58,11 +58,11 @@ Successfully changed project path to: /home/mateycardula/Dev/Unity/Projects/Surv
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [140211111502528] Host "[IP] 192.168.73.194 [Port] 0 [Flags] 2 [Guid] 2697030594 [EditorId] 2697030594 [Version] 1048832 [Id] LinuxEditor(16,192.168.73.194) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [140470143431360] Host "[IP] 192.168.1.102 [Port] 0 [Flags] 2 [Guid] 877849906 [EditorId] 877849906 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.102) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [140211111502528] Host "[IP] 192.168.73.194 [Port] 0 [Flags] 2 [Guid] 2697030594 [EditorId] 2697030594 [Version] 1048832 [Id] LinuxEditor(16,192.168.73.194) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [140470143431360] Host "[IP] 192.168.1.102 [Port] 0 [Flags] 2 [Guid] 877849906 [EditorId] 877849906 [Version] 1048832 [Id] LinuxEditor(16,192.168.1.102) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 4,46 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 4,69 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Initialize engine version: 2022.3.2f1 (d74737c6db50)
 [Subsystems] Discovering subsystems at path /home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -78,49 +78,49 @@ int_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program
 L_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewpor
 t_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_share
 d_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 1876562960
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -639343648
 Initialize mono
 Mono path[0] = '/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/Managed'
 Mono path[1] = '/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
 Mono config path = '/home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56985
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56067
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /home/mateycardula/Unity/Hub/Editor/2022.3.2f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0,005460 seconds.
-- Loaded All Assemblies, in  0,333 seconds
+Registered in 0,006042 seconds.
+- Loaded All Assemblies, in  0,361 seconds
 Native extension for LinuxStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0,313 seconds
-Domain Reload Profiling: 645ms
-	BeginReloadAssembly (68ms)
+- Finished resetting the current domain, in  0,352 seconds
+Domain Reload Profiling: 713ms
+	BeginReloadAssembly (72ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (38ms)
+	RebuildCommonClasses (40ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (66ms)
-	LoadAllAssembliesAndSetupDomain (152ms)
-		LoadAssemblies (65ms)
+	initialDomainReloadingComplete (77ms)
+	LoadAllAssembliesAndSetupDomain (163ms)
+		LoadAssemblies (70ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (148ms)
-			TypeCache.Refresh (147ms)
-				TypeCache.ScanAssembly (134ms)
+		AnalyzeDomain (158ms)
+			TypeCache.Refresh (157ms)
+				TypeCache.ScanAssembly (144ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (313ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (353ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (238ms)
+		SetupLoadedEditorAssemblies (269ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (34ms)
-			SetLoadedEditorAssemblies (9ms)
+			InitializePlatformSupportModulesInManaged (38ms)
+			SetLoadedEditorAssemblies (10ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (138ms)
-			ProcessInitializeOnLoadMethodAttributes (55ms)
+			ProcessInitializeOnLoadAttributes (155ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -130,51 +130,51 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0,721 seconds
-Refreshing native plugins compatible for Editor in 2,79 ms, found 0 plugins.
+- Loaded All Assemblies, in  0,831 seconds
+Refreshing native plugins compatible for Editor in 2,55 ms, found 0 plugins.
 Native extension for LinuxStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0,576 seconds
-Domain Reload Profiling: 1295ms
-	BeginReloadAssembly (118ms)
+- Finished resetting the current domain, in  0,642 seconds
+Domain Reload Profiling: 1472ms
+	BeginReloadAssembly (139ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (23ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (78ms)
-	LoadAllAssembliesAndSetupDomain (480ms)
-		LoadAssemblies (212ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (88ms)
+	LoadAllAssembliesAndSetupDomain (553ms)
+		LoadAssemblies (242ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (314ms)
-			TypeCache.Refresh (295ms)
-				TypeCache.ScanAssembly (281ms)
-			ScanForSourceGeneratedMonoScriptInfo (14ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (576ms)
+		AnalyzeDomain (363ms)
+			TypeCache.Refresh (341ms)
+				TypeCache.ScanAssembly (326ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (642ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (411ms)
+		SetupLoadedEditorAssemblies (453ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (28ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (31ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (262ms)
-			ProcessInitializeOnLoadMethodAttributes (23ms)
+			BeforeProcessingInitializeOnLoad (92ms)
+			ProcessInitializeOnLoadAttributes (291ms)
+			ProcessInitializeOnLoadMethodAttributes (27ms)
 			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 2,82 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2,66 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Unloading 3172 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (49,8 KB). Loaded Objects now: 3659.
-Memory consumption went from 129,1 MB to 129,0 MB.
-Total: 3,665314 ms (FindLiveObjects: 0,201950 ms CreateObjectMapping: 0,125999 ms MarkObjects: 3,197593 ms  DeleteObjects: 0,137778 ms)
+Unloading 38 unused Assets / (49,5 KB). Loaded Objects now: 3659.
+Memory consumption went from 129,2 MB to 129,1 MB.
+Total: 4,712599 ms (FindLiveObjects: 0,204767 ms CreateObjectMapping: 0,129052 ms MarkObjects: 4,204806 ms  DeleteObjects: 0,172571 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -188,28 +188,235 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 322,935539 seconds.
+  Time since last request: 979,774798 seconds.
+  path: Assets/Graphics/Models/Consumables/AppleRed.prefab
+  artifactKey: Guid(273b0a646bf4f410c898f350686cf95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Models/Consumables/AppleRed.prefab using Guid(273b0a646bf4f410c898f350686cf95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b515a17e440800a5838601389876e92') in 0,116486 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 21,203462 seconds.
+  path: Assets/Scripts/Inventory Management/Inventory.cs
+  artifactKey: Guid(5bde85e604dddcd0587bea0e59f63685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory Management/Inventory.cs using Guid(5bde85e604dddcd0587bea0e59f63685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4a6b4fc6a092d2f7b216d4eeecf2767') in 0,000295 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0,594 seconds
+Refreshing native plugins compatible for Editor in 2,56 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0,678 seconds
+Domain Reload Profiling: 1270ms
+	BeginReloadAssembly (108ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (389ms)
+		LoadAssemblies (188ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (240ms)
+			TypeCache.Refresh (233ms)
+				TypeCache.ScanAssembly (224ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (678ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (410ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (101ms)
+			ProcessInitializeOnLoadAttributes (250ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 2,27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 3148 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 29 unused Assets / (32,7 KB). Loaded Objects now: 3670.
+Memory consumption went from 126,4 MB to 126,3 MB.
+Total: 2,956875 ms (FindLiveObjects: 0,175616 ms CreateObjectMapping: 0,086715 ms MarkObjects: 2,639466 ms  DeleteObjects: 0,053929 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0,669 seconds
+Refreshing native plugins compatible for Editor in 2,40 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0,667 seconds
+Domain Reload Profiling: 1334ms
+	BeginReloadAssembly (123ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (441ms)
+		LoadAssemblies (205ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (280ms)
+			TypeCache.Refresh (273ms)
+				TypeCache.ScanAssembly (262ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (668ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (388ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (38ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (106ms)
+			ProcessInitializeOnLoadAttributes (213ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 2,22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 3149 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 29 unused Assets / (32,7 KB). Loaded Objects now: 3673.
+Memory consumption went from 126,6 MB to 126,6 MB.
+Total: 3,283449 ms (FindLiveObjects: 0,171365 ms CreateObjectMapping: 0,079091 ms MarkObjects: 2,912639 ms  DeleteObjects: 0,119456 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /home/mateycardula/Dev/Unity/Projects/Survival-Game/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0,611 seconds
+Refreshing native plugins compatible for Editor in 2,70 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0,645 seconds
+Domain Reload Profiling: 1255ms
+	BeginReloadAssembly (109ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (30ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (408ms)
+		LoadAssemblies (198ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (248ms)
+			TypeCache.Refresh (242ms)
+				TypeCache.ScanAssembly (232ms)
+			ScanForSourceGeneratedMonoScriptInfo (2ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (646ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (347ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (36ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (94ms)
+			ProcessInitializeOnLoadAttributes (187ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 2,29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0,00 ms.
+Unloading 3149 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 29 unused Assets / (32,7 KB). Loaded Objects now: 3676.
+Memory consumption went from 126,6 MB to 126,6 MB.
+Total: 3,253151 ms (FindLiveObjects: 0,173487 ms CreateObjectMapping: 0,089363 ms MarkObjects: 2,931912 ms  DeleteObjects: 0,057371 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3943,204067 seconds.
+  path: Assets/Tree 1.prefab
+  artifactKey: Guid(c0b8792ad9ae3a0858e6c66bc6c9b30d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tree 1.prefab using Guid(c0b8792ad9ae3a0858e6c66bc6c9b30d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '763dcc1ca0b23d8cebf77c92e8ccbfcf') in 0,165799 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 98
+========================================================================
+Received Import Request.
+  Time since last request: 0,000060 seconds.
   path: Assets/Tree0.prefab
   artifactKey: Guid(71f168bc99387aa89b1ee09fc76a5f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tree0.prefab using Guid(71f168bc99387aa89b1ee09fc76a5f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a9195f9e1cde7d11ea02094bba34f34') in 0,150239 seconds
+Start importing Assets/Tree0.prefab using Guid(71f168bc99387aa89b1ee09fc76a5f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12e5e2afb6eab605b477be54fae10eed') in 0,050630 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 78
+Number of asset objects unloaded after import = 79
 ========================================================================
 Received Import Request.
-  Time since last request: 0,000042 seconds.
-  path: Assets/Tree3-Broken.prefab
-  artifactKey: Guid(2ae759381b63cd038a90481aa785e902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tree3-Broken.prefab using Guid(2ae759381b63cd038a90481aa785e902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c140b131b944cad82f118cb0a74cdc6a') in 0,046321 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 78
-========================================================================
-Received Import Request.
-  Time since last request: 0,000023 seconds.
+  Time since last request: 0,000040 seconds.
   path: Assets/Tree 3.prefab
   artifactKey: Guid(86891001c5f1bf7479bd3dde5b953726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tree 3.prefab using Guid(86891001c5f1bf7479bd3dde5b953726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '087440dbca8cb5e01e4088329f8d73da') in 0,047445 seconds
+Start importing Assets/Tree 3.prefab using Guid(86891001c5f1bf7479bd3dde5b953726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d8cd52fb8826c6903110ca7ec86305f') in 0,053463 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 97
+Number of asset objects unloaded after import = 98
+========================================================================
+Received Import Request.
+  Time since last request: 0,000037 seconds.
+  path: Assets/Tree0-Broken.prefab
+  artifactKey: Guid(ffefae41a602bfa2fabab0975dce9f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tree0-Broken.prefab using Guid(ffefae41a602bfa2fabab0975dce9f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3767d9ad3caa86c70d2f1b5537d1eb1e') in 0,040828 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 61
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 125, details: Operation aborted.
 AssetImportWorker is now disconnected from the server
@@ -431,7 +638,7 @@ Memory Statistics:
     [ALLOC_TEMP_Background Job.worker 1]
       Initial Block Size 32,0 KB
       Current Block Size 196,0 KB
-      Peak Allocated Bytes 153,5 KB
+      Peak Allocated Bytes 154,0 KB
       Overflow Count 2
     [ALLOC_TEMP_Background Job.worker 0]
       Initial Block Size 32,0 KB
@@ -514,9 +721,9 @@ Memory Statistics:
       Peak Allocated Bytes 0 B
       Overflow Count 0
     [ALLOC_TEMP_MAIN]
-      Peak usage frame count: [1,0 MB-2,0 MB]: 2 frames, [8,0 MB-16,0 MB]: 1 frames
+      Peak usage frame count: [32,0 KB-64,0 KB]: 1 frames, [1,0 MB-2,0 MB]: 3 frames, [8,0 MB-16,0 MB]: 2 frames
       Initial Block Size 16,0 MB
-      Current Block Size 18,7 MB
+      Current Block Size 19,1 MB
       Peak Allocated Bytes 15,3 MB
       Overflow Count 0
     [ALLOC_TEMP_CoreBusinessMetricsCache]
@@ -529,6 +736,11 @@ Memory Statistics:
       Current Block Size 64,0 KB
       Peak Allocated Bytes 32,6 KB
       Overflow Count 0
+    [ALLOC_TEMP_Loading.PreloadManager] x 3
+      Initial Block Size 32,0 MB
+      Current Block Size 32,0 MB
+      Peak Allocated Bytes 0 B
+      Overflow Count 0
     [ALLOC_TEMP_Profiler.Dispatcher]
       Initial Block Size 64,0 KB
       Current Block Size 64,0 KB
@@ -540,28 +752,28 @@ Memory Statistics:
       Peak Allocated Bytes 0 B
       Overflow Count 0
 [ALLOC_MEMORYPROFILER]
-  Peak usage frame count: [256,0 KB-0,5 MB]: 2 frames, [0,5 MB-1,0 MB]: 1 frames
+  Peak usage frame count: [256,0 KB-0,5 MB]: 4 frames, [0,5 MB-1,0 MB]: 2 frames
   Requested Block Size 1,0 MB
   Peak Block count 1
   Peak Allocated memory 0,5 MB
   Peak Large allocation bytes 0 B
 [ALLOC_DEFAULT] Dual Thread Allocator
-  Peak main deferred allocation count 18
+  Peak main deferred allocation count 43
     [ALLOC_BUCKET]
       Large Block size 32,0 MB
       Used Block count 1
-      Peak Allocated bytes 7,4 MB
+      Peak Allocated bytes 7,7 MB
     [ALLOC_DEFAULT_MAIN]
-      Peak usage frame count: [32,0 MB-64,0 MB]: 3 frames
+      Peak usage frame count: [32,0 MB-64,0 MB]: 6 frames
       Requested Block Size 16,0 MB
       Peak Block count 4
-      Peak Allocated memory 59,9 MB
+      Peak Allocated memory 60,0 MB
       Peak Large allocation bytes 0 B
     [ALLOC_DEFAULT_THREAD]
-      Peak usage frame count: [1,0 MB-2,0 MB]: 2 frames, [2,0 MB-4,0 MB]: 1 frames
+      Peak usage frame count: [1,0 MB-2,0 MB]: 4 frames, [2,0 MB-4,0 MB]: 2 frames
       Requested Block Size 16,0 MB
       Peak Block count 1
-      Peak Allocated memory 3,0 MB
+      Peak Allocated memory 3,4 MB
       Peak Large allocation bytes 0 B
 [ALLOC_TEMP_JOB_1_FRAME]
   Initial Block Size 2,0 MB
@@ -588,15 +800,15 @@ Memory Statistics:
     [ALLOC_BUCKET]
       Large Block size 32,0 MB
       Used Block count 1
-      Peak Allocated bytes 7,4 MB
+      Peak Allocated bytes 7,7 MB
     [ALLOC_GFX_MAIN]
-      Peak usage frame count: [1,0 MB-2,0 MB]: 3 frames
+      Peak usage frame count: [64,0 KB-128,0 KB]: 1 frames, [128,0 KB-256,0 KB]: 1 frames, [0,5 MB-1,0 MB]: 1 frames, [1,0 MB-2,0 MB]: 3 frames
       Requested Block Size 16,0 MB
       Peak Block count 1
       Peak Allocated memory 1,8 MB
       Peak Large allocation bytes 0 B
     [ALLOC_GFX_THREAD]
-      Peak usage frame count: [0-1,0 KB]: 3 frames
+      Peak usage frame count: [0-1,0 KB]: 6 frames
       Requested Block Size 16,0 MB
       Peak Block count 0
       Peak Allocated memory 0 B
@@ -606,15 +818,15 @@ Memory Statistics:
     [ALLOC_BUCKET]
       Large Block size 32,0 MB
       Used Block count 1
-      Peak Allocated bytes 7,4 MB
+      Peak Allocated bytes 7,7 MB
     [ALLOC_CACHEOBJECTS_MAIN]
-      Peak usage frame count: [8,0 MB-16,0 MB]: 2 frames, [32,0 MB-64,0 MB]: 1 frames
+      Peak usage frame count: [4,0 MB-8,0 MB]: 1 frames, [8,0 MB-16,0 MB]: 3 frames, [32,0 MB-64,0 MB]: 2 frames
       Requested Block Size 4,0 MB
       Peak Block count 12
       Peak Allocated memory 41,4 MB
       Peak Large allocation bytes 0 B
     [ALLOC_CACHEOBJECTS_THREAD]
-      Peak usage frame count: [0-1,0 KB]: 3 frames
+      Peak usage frame count: [0-1,0 KB]: 6 frames
       Requested Block Size 4,0 MB
       Peak Block count 0
       Peak Allocated memory 0 B
@@ -624,21 +836,21 @@ Memory Statistics:
     [ALLOC_BUCKET]
       Large Block size 32,0 MB
       Used Block count 1
-      Peak Allocated bytes 7,4 MB
+      Peak Allocated bytes 7,7 MB
     [ALLOC_TYPETREE_MAIN]
-      Peak usage frame count: [1,0 MB-2,0 MB]: 2 frames, [16,0 MB-32,0 MB]: 1 frames
+      Peak usage frame count: [0,5 MB-1,0 MB]: 2 frames, [1,0 MB-2,0 MB]: 2 frames, [8,0 MB-16,0 MB]: 1 frames, [16,0 MB-32,0 MB]: 1 frames
       Requested Block Size 2,0 MB
       Peak Block count 10
       Peak Allocated memory 17,2 MB
       Peak Large allocation bytes 0 B
     [ALLOC_TYPETREE_THREAD]
-      Peak usage frame count: [0-1,0 KB]: 3 frames
+      Peak usage frame count: [0-1,0 KB]: 6 frames
       Requested Block Size 2,0 MB
       Peak Block count 0
       Peak Allocated memory 0 B
       Peak Large allocation bytes 0 B
 [ALLOC_PROFILER]
-  Peak usage frame count: [64,0 KB-128,0 KB]: 3 frames
+  Peak usage frame count: [64,0 KB-128,0 KB]: 6 frames
   Requested Block Size 16,0 MB
   Peak Block count 1
   Peak Allocated memory 88,7 KB
@@ -646,9 +858,9 @@ Memory Statistics:
     [ALLOC_PROFILER_BUCKET]
       Large Block size 32,0 MB
       Used Block count 1
-      Peak Allocated bytes 2,6 KB
+      Peak Allocated bytes 2,8 KB
 [ALLOC_PROFILER_EDITOR]
-  Peak usage frame count: [0-1,0 KB]: 3 frames
+  Peak usage frame count: [0-1,0 KB]: 6 frames
   Requested Block Size 1,0 MB
   Peak Block count 0
   Peak Allocated memory 0 B
@@ -656,5 +868,5 @@ Memory Statistics:
     [ALLOC_PROFILER_BUCKET]
       Large Block size 32,0 MB
       Used Block count 1
-      Peak Allocated bytes 2,6 KB
-##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1688930637419,"processId":2985,"allocatedMemory":62056352,"memoryLabels":[{"Default":37571},{"Permanent":19059},{"Thread":1086448},{"Manager":3251687},{"VertexData":96044},{"Geometry":408},{"Particles":17856},{"VFX":44},{"Texture":130737},{"Shader":599328},{"Material":7304},{"GfxDevice":231248},{"Animation":22438},{"Audio":4932},{"Font":1792},{"FontEngine":336},{"Physics":274733},{"Physics2D":153264},{"Serialization":6350603},{"Input":59520},{"JobScheduler":13087096},{"GarbageCollector":1049152},{"Mono":92},{"ScriptingNativeRuntime":7924736},{"BaseObject":1826151},{"Resource":1260},{"Renderer":8664},{"Transform":48},{"File":12265},{"Network":3358},{"WebCam":40},{"Culling":48},{"Terrain":1073},{"TerrainPhysics":8},{"Wind":24},{"STL":428544},{"String":7987215},{"DynamicArray":3006825},{"HashMap":1430170},{"Utility":2918750},{"PoolAlloc":1488},{"AI":59656},{"TypeTree":4533},{"ScriptManager":1487749},{"MonoScriptCache":531344},{"RuntimeInitializeOnLoadManager":72},{"AncestorCache":32},{"SpriteAtlas":112},{"GI":16312},{"Director":7928},{"WebRequest":720},{"VR":45961},{"SceneManager":640},{"Video":256},{"LazyScriptCache":32},{"ManagedAttributeManager":1},{"TextureStreaming":1416},{"NativeArray":839},{"ScreenCapture":8},{"Camera":25},{"Secure":1},{"CrashReporter":1040},{"SerializationCache":1576},{"APIUpdating":11856},{"Subsystems":384},{"VirtualTexturing":59488},{"StaticSafetyDebugInfo":327680},{"EditorGui":4728292},{"EditorUtility":26537},{"VersionControl":4},{"Undo":736},{"AssetDatabase":2343006},{"AssetImporter":283243},{"RestService":2880},{"EditorGi":24528},{"ProgressiveLightmapper":11144},{"License":3144},{"UnityConnect":25432},{"Collab":25},{"Upm":1232},{"DrivenProperties":80},{"LocalIPC":119},{"ProfilerEditor":10991},{"CoreBusinessMetrics":2875},{"AssetReference":32},{"IPCStream":32}]}
+      Peak Allocated bytes 2,8 KB
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1689100735931,"processId":4067,"allocatedMemory":62143849,"memoryLabels":[{"Default":37571},{"Permanent":19323},{"Thread":1086448},{"Manager":3251721},{"VertexData":96140},{"Geometry":408},{"Particles":17856},{"VFX":44},{"Texture":130737},{"Shader":611772},{"Material":7304},{"GfxDevice":231720},{"Animation":24902},{"Audio":4932},{"Font":1792},{"FontEngine":336},{"Physics":275245},{"Physics2D":153264},{"Serialization":6393971},{"Input":59520},{"JobScheduler":13087096},{"GarbageCollector":1049152},{"Mono":92},{"ScriptingNativeRuntime":7924736},{"BaseObject":1830559},{"Resource":1260},{"Renderer":8952},{"Transform":48},{"File":12320},{"Network":3354},{"WebCam":40},{"Culling":48},{"Terrain":1073},{"TerrainPhysics":8},{"Wind":24},{"STL":465408},{"String":7987189},{"DynamicArray":3008233},{"HashMap":1414772},{"Utility":2918750},{"PoolAlloc":1488},{"AI":59656},{"TypeTree":4533},{"ScriptManager":1487749},{"MonoScriptCache":531344},{"RuntimeInitializeOnLoadManager":72},{"AncestorCache":32},{"SpriteAtlas":112},{"GI":16312},{"Director":7928},{"WebRequest":720},{"VR":45961},{"SceneManager":640},{"Video":256},{"LazyScriptCache":32},{"ManagedAttributeManager":1},{"TextureStreaming":1416},{"NativeArray":839},{"ScreenCapture":8},{"Camera":25},{"Secure":1},{"CrashReporter":1040},{"SerializationCache":1576},{"APIUpdating":11856},{"Subsystems":384},{"VirtualTexturing":59488},{"StaticSafetyDebugInfo":327680},{"EditorGui":4728292},{"EditorUtility":26817},{"VersionControl":4},{"Undo":736},{"AssetDatabase":2342974},{"AssetImporter":283243},{"RestService":2880},{"EditorGi":24528},{"ProgressiveLightmapper":11144},{"License":3144},{"UnityConnect":25432},{"Collab":25},{"Upm":1232},{"DrivenProperties":80},{"LocalIPC":119},{"ProfilerEditor":10991},{"CoreBusinessMetrics":2875},{"AssetReference":32},{"IPCStream":32}]}
