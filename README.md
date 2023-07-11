@@ -40,7 +40,7 @@ public class ItemScriptableObject : ScriptableObject
 На секој тип на објект кој може да се собере и да се чува во _inventory_ му ги доделуваме овие податоци.
 
 ### Наследување кај ScriptableObjects
-Како и кај секоја од класа, така наследувањето е возможно и кај _ScriptableObjects_. Во нашата игра од класата _ItemScriptableObject_ наследуваат каси како: _ConsumableScriptableObject_ (Објекти кои прават промена на глад и жед), _ResourceScriptableObject_ (Објекти кои се потребни за градење),  _ToolScriptableObject_ (Објекти со кои може да се гради или да се кршат објекти од околината).  
+Како и кај сите класи, така наследувањето е возможно и кај _ScriptableObjects_. Во нашата игра од класата _ItemScriptableObject_ наследуваат каси како: _ConsumableScriptableObject_ (Објекти кои прават промена на глад и жед), _ResourceScriptableObject_ (Објекти кои се потребни за градење),  _ToolScriptableObject_ (Објекти со кои може да се гради или да се кршат објекти од околината).  
 
 ```csharp
 [CreateAssetMenu(menuName = "Create Item/Consumable")]
