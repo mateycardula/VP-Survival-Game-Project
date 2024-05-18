@@ -1,7 +1,8 @@
 # VP-Survival-Game-Project
-## Read in [English](#english)
+
 
 # Macedonian
+## Read in [English](#english)
 ## Содржина
 * [Општо](#општо)
 * [Design Pattern](#design-pattern)
